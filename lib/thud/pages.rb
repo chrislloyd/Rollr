@@ -1,0 +1,8 @@
+require 'thud/pages/ask'
+require 'thud/pages/day'
+require 'thud/pages/index'
+require 'thud/pages/permalink'
+require 'thud/pages/search'
+require 'thud/pages/static'
+require 'thud/pages/submit'
+require 'thud/pages/tag'

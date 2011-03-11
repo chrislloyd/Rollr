@@ -1,0 +1,41 @@
+GEM
+  remote: http://rubygems.org/
+  specs:
+    control_tower (1.0)
+      rack (= 1.2.1)
+    diff-lcs (1.1.2)
+    nokogiri (1.4.4)
+    polyglot (0.3.1)
+    rack (1.2.1)
+    rake (0.8.7)
+    rspec (2.5.0)
+      rspec-core (~> 2.5.0)
+      rspec-expectations (~> 2.5.0)
+      rspec-mocks (~> 2.5.0)
+    rspec-core (2.5.1)
+    rspec-expectations (2.5.0)
+      diff-lcs (~> 1.1.2)
+    rspec-mocks (2.5.0)
+    sanitize (2.0.0)
+      nokogiri (~> 1.4.4)
+    sinatra (1.2.0)
+      rack (~> 1.1)
+      tilt (>= 1.2.2, < 2.0)
+    temple (0.1.7)
+    tilt (1.2.2)
+    treetop (1.4.9)
+      polyglot (>= 0.3.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  bundler
+  control_tower
+  nokogiri
+  rake
+  rspec
+  sanitize
+  sinatra
+  temple
+  treetop

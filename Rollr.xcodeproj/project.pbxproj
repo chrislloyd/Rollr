@@ -1,0 +1,623 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		830605DF1329A4630076F243 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 830605DE1329A4630076F243 /* Cocoa.framework */; };
+		830605EC1329A4630076F243 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 830605EB1329A4630076F243 /* main.m */; };
+		830606001329A5060076F243 /* main.rb in Resources */ = {isa = PBXBuildFile; fileRef = 830605FF1329A5060076F243 /* main.rb */; };
+		830606041329A52C0076F243 /* Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 830606031329A52C0076F243 /* Icon.icns */; };
+		830606061329A5670076F243 /* MacRuby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 830606051329A5670076F243 /* MacRuby.framework */; };
+		830606231329BFEB0076F243 /* app_controller.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8306061A1329BFEB0076F243 /* app_controller.rb */; };
+		830606241329BFEB0076F243 /* app_delegate.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8306061C1329BFEB0076F243 /* app_delegate.rb */; };
+		830606251329BFEB0076F243 /* server.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8306061E1329BFEB0076F243 /* server.rb */; };
+		830606261329BFEB0076F243 /* template.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8306061F1329BFEB0076F243 /* template.rb */; };
+		830606271329BFEB0076F243 /* drop_icon_view.rb in Resources */ = {isa = PBXBuildFile; fileRef = 830606211329BFEB0076F243 /* drop_icon_view.rb */; };
+		830606281329BFEB0076F243 /* drop_view.rb in Resources */ = {isa = PBXBuildFile; fileRef = 830606221329BFEB0076F243 /* drop_view.rb */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		830605DA1329A4630076F243 /* Rollr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rollr.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		830605DE1329A4630076F243 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		830605E11329A4630076F243 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		830605E31329A4630076F243 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		830605EB1329A4630076F243 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		830605FF1329A5060076F243 /* main.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = main.rb; sourceTree = "<group>"; };
+		830606011329A5240076F243 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		830606031329A52C0076F243 /* Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Icon.icns; sourceTree = "<group>"; };
+		830606051329A5670076F243 /* MacRuby.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MacRuby.framework; path = SDKs/MacOSX10.6.sdk/Library/Frameworks/MacRuby.framework; sourceTree = DEVELOPER_DIR; };
+		8306060D1329A60F0076F243 /* Gemfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 4; path = Gemfile; sourceTree = "<group>"; };
+		8306061A1329BFEB0076F243 /* app_controller.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = app_controller.rb; sourceTree = "<group>"; };
+		8306061C1329BFEB0076F243 /* app_delegate.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = app_delegate.rb; sourceTree = "<group>"; };
+		8306061E1329BFEB0076F243 /* server.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = server.rb; sourceTree = "<group>"; };
+		8306061F1329BFEB0076F243 /* template.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = template.rb; sourceTree = "<group>"; };
+		830606211329BFEB0076F243 /* drop_icon_view.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = drop_icon_view.rb; sourceTree = "<group>"; };
+		830606221329BFEB0076F243 /* drop_view.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = drop_view.rb; sourceTree = "<group>"; };
+		830606391329C5FD0076F243 /* core_ext.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = core_ext.rb; sourceTree = "<group>"; };
+		8306063B1329C5FD0076F243 /* context.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = context.rb; sourceTree = "<group>"; };
+		8306063C1329C5FD0076F243 /* helpers.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = helpers.rb; sourceTree = "<group>"; };
+		8306063E1329C5FD0076F243 /* basic_variables.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = basic_variables.rb; sourceTree = "<group>"; };
+		8306063F1329C5FD0076F243 /* following.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = following.rb; sourceTree = "<group>"; };
+		830606401329C5FD0076F243 /* group_blogs.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = group_blogs.rb; sourceTree = "<group>"; };
+		830606411329C5FD0076F243 /* jump_pagination.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = jump_pagination.rb; sourceTree = "<group>"; };
+		830606421329C5FD0076F243 /* likes.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = likes.rb; sourceTree = "<group>"; };
+		830606431329C5FD0076F243 /* navigation.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = navigation.rb; sourceTree = "<group>"; };
+		830606441329C5FD0076F243 /* pages.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = pages.rb; sourceTree = "<group>"; };
+		830606451329C5FD0076F243 /* twitter.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = twitter.rb; sourceTree = "<group>"; };
+		830606461329C5FD0076F243 /* page.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = page.rb; sourceTree = "<group>"; };
+		830606481329C5FD0076F243 /* ask.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = ask.rb; sourceTree = "<group>"; };
+		830606491329C5FD0076F243 /* day.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = day.rb; sourceTree = "<group>"; };
+		8306064A1329C5FD0076F243 /* index.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = index.rb; sourceTree = "<group>"; };
+		8306064B1329C5FD0076F243 /* permalink.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = permalink.rb; sourceTree = "<group>"; };
+		8306064C1329C5FD0076F243 /* search.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = search.rb; sourceTree = "<group>"; };
+		8306064D1329C5FD0076F243 /* static.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = static.rb; sourceTree = "<group>"; };
+		8306064E1329C5FD0076F243 /* submit.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = submit.rb; sourceTree = "<group>"; };
+		8306064F1329C5FD0076F243 /* tag.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = tag.rb; sourceTree = "<group>"; };
+		830606501329C5FD0076F243 /* pages.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = pages.rb; sourceTree = "<group>"; };
+		830606521329C5FD0076F243 /* author.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = author.rb; sourceTree = "<group>"; };
+		830606531329C5FD0076F243 /* basic_variables.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = basic_variables.rb; sourceTree = "<group>"; };
+		830606541329C5FD0076F243 /* date.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = date.rb; sourceTree = "<group>"; };
+		830606551329C5FD0076F243 /* permalink_navigation.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = permalink_navigation.rb; sourceTree = "<group>"; };
+		830606561329C5FD0076F243 /* reblogs.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = reblogs.rb; sourceTree = "<group>"; };
+		830606571329C5FD0076F243 /* tags.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = tags.rb; sourceTree = "<group>"; };
+		830606581329C5FD0076F243 /* post.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = post.rb; sourceTree = "<group>"; };
+		8306065A1329C5FD0076F243 /* answer.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = answer.rb; sourceTree = "<group>"; };
+		8306065B1329C5FD0076F243 /* audio.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = audio.rb; sourceTree = "<group>"; };
+		8306065C1329C5FD0076F243 /* chat.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = chat.rb; sourceTree = "<group>"; };
+		8306065D1329C5FD0076F243 /* link.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = link.rb; sourceTree = "<group>"; };
+		8306065E1329C5FD0076F243 /* photo.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = photo.rb; sourceTree = "<group>"; };
+		8306065F1329C5FD0076F243 /* quote.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = quote.rb; sourceTree = "<group>"; };
+		830606601329C5FD0076F243 /* text.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = text.rb; sourceTree = "<group>"; };
+		830606611329C5FD0076F243 /* video.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = video.rb; sourceTree = "<group>"; };
+		830606621329C5FD0076F243 /* posts.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = posts.rb; sourceTree = "<group>"; };
+		830606641329C5FD0076F243 /* thud.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = thud.rb; sourceTree = "<group>"; };
+		830606661329C5FD0076F243 /* engine.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = engine.rb; sourceTree = "<group>"; };
+		830606681329C5FD0076F243 /* block_filter.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = block_filter.rb; sourceTree = "<group>"; };
+		830606691329C5FD0076F243 /* scope_filter.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = scope_filter.rb; sourceTree = "<group>"; };
+		8306066A1329C5FD0076F243 /* filters.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = filters.rb; sourceTree = "<group>"; };
+		8306066B1329C5FD0076F243 /* generator.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = generator.rb; sourceTree = "<group>"; };
+		8306066C1329C5FD0076F243 /* helpers.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = helpers.rb; sourceTree = "<group>"; };
+		8306066D1329C5FD0076F243 /* lang.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = lang.rb; sourceTree = "<group>"; };
+		8306066E1329C5FD0076F243 /* lang.tt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = lang.tt; sourceTree = "<group>"; };
+		8306066F1329C5FD0076F243 /* parser.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = parser.rb; sourceTree = "<group>"; };
+		830606701329C5FD0076F243 /* template.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = template.rb; sourceTree = "<group>"; };
+		830606721329C5FD0076F243 /* tuml.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = tuml.rb; sourceTree = "<group>"; };
+		830606A71329C6860076F243 /* spec_helper.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = spec_helper.rb; sourceTree = "<group>"; };
+		830606AA1329C6860076F243 /* dearcoketalk.json */ = {isa = PBXFileReference; lastKnownFileType = text; path = dearcoketalk.json; sourceTree = "<group>"; };
+		830606AB1329C6860076F243 /* hacker.json */ = {isa = PBXFileReference; lastKnownFileType = text; path = hacker.json; sourceTree = "<group>"; };
+		830606AC1329C6860076F243 /* manicalrage.json */ = {isa = PBXFileReference; lastKnownFileType = text; path = manicalrage.json; sourceTree = "<group>"; };
+		830606AD1329C6860076F243 /* marco.json */ = {isa = PBXFileReference; lastKnownFileType = text; path = marco.json; sourceTree = "<group>"; };
+		830606AE1329C6860076F243 /* merlin.json */ = {isa = PBXFileReference; lastKnownFileType = text; path = merlin.json; sourceTree = "<group>"; };
+		830606AF1329C6860076F243 /* poacher.json */ = {isa = PBXFileReference; lastKnownFileType = text; path = poacher.json; sourceTree = "<group>"; };
+		830606B01329C6860076F243 /* staff.json */ = {isa = PBXFileReference; lastKnownFileType = text; path = staff.json; sourceTree = "<group>"; };
+		830606B21329C6860076F243 /* basic_variables_spec.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = basic_variables_spec.rb; sourceTree = "<group>"; };
+		830606B41329C6860076F243 /* index_spec.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = index_spec.rb; sourceTree = "<group>"; };
+		830606B51329C6860076F243 /* permalink_spec.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = permalink_spec.rb; sourceTree = "<group>"; };
+		830606B71329C6860076F243 /* date_spec.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = date_spec.rb; sourceTree = "<group>"; };
+		830606B81329C6860076F243 /* tags_spec.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = tags_spec.rb; sourceTree = "<group>"; };
+		830606BA1329C6860076F243 /* answer_spec.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = answer_spec.rb; sourceTree = "<group>"; };
+		830606BB1329C6860076F243 /* audio_spec.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = audio_spec.rb; sourceTree = "<group>"; };
+		830606BC1329C6860076F243 /* chat_spec.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = chat_spec.rb; sourceTree = "<group>"; };
+		830606BD1329C6860076F243 /* quote_spec.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = quote_spec.rb; sourceTree = "<group>"; };
+		830606C01329C6860076F243 /* block_filter_spec.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = block_filter_spec.rb; sourceTree = "<group>"; };
+		830606C11329C6860076F243 /* scope_filter_spec.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = scope_filter_spec.rb; sourceTree = "<group>"; };
+		830606C21329C6860076F243 /* generator_spec.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = generator_spec.rb; sourceTree = "<group>"; };
+		830606C31329C6860076F243 /* lang_spec.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = lang_spec.rb; sourceTree = "<group>"; };
+		830606CA1329C7520076F243 /* Rakefile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Rakefile; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		830605D71329A4630076F243 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				830606061329A5670076F243 /* MacRuby.framework in Frameworks */,
+				830605DF1329A4630076F243 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		830605CD1329A4200076F243 = {
+			isa = PBXGroup;
+			children = (
+				830605E41329A4630076F243 /* Rollr */,
+				830606381329C5FD0076F243 /* Library */,
+				830606A61329C6860076F243 /* Spec */,
+				830605DD1329A4630076F243 /* Frameworks */,
+				830605DB1329A4630076F243 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		830605DB1329A4630076F243 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				830605DA1329A4630076F243 /* Rollr.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		830605DD1329A4630076F243 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				830605E11329A4630076F243 /* AppKit.framework */,
+				830605DE1329A4630076F243 /* Cocoa.framework */,
+				830605E31329A4630076F243 /* Foundation.framework */,
+				830606051329A5670076F243 /* MacRuby.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		830605E41329A4630076F243 /* Rollr */ = {
+			isa = PBXGroup;
+			children = (
+				830606181329BFEB0076F243 /* Classes */,
+				830605E51329A4630076F243 /* Supporting Files */,
+			);
+			name = Rollr;
+			path = .;
+			sourceTree = SOURCE_ROOT;
+		};
+		830605E51329A4630076F243 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				830605EB1329A4630076F243 /* main.m */,
+				830606011329A5240076F243 /* Info.plist */,
+				830606031329A52C0076F243 /* Icon.icns */,
+				830606CA1329C7520076F243 /* Rakefile */,
+				830605FF1329A5060076F243 /* main.rb */,
+				8306060D1329A60F0076F243 /* Gemfile */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		830606181329BFEB0076F243 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				830606191329BFEB0076F243 /* Controllers */,
+				8306061B1329BFEB0076F243 /* Delegates */,
+				8306061D1329BFEB0076F243 /* Models */,
+				830606201329BFEB0076F243 /* Views */,
+			);
+			name = Classes;
+			path = app;
+			sourceTree = "<group>";
+		};
+		830606191329BFEB0076F243 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8306061A1329BFEB0076F243 /* app_controller.rb */,
+			);
+			name = Controllers;
+			path = controllers;
+			sourceTree = "<group>";
+		};
+		8306061B1329BFEB0076F243 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				8306061C1329BFEB0076F243 /* app_delegate.rb */,
+			);
+			name = Delegates;
+			path = delegates;
+			sourceTree = "<group>";
+		};
+		8306061D1329BFEB0076F243 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8306061E1329BFEB0076F243 /* server.rb */,
+				8306061F1329BFEB0076F243 /* template.rb */,
+			);
+			name = Models;
+			path = models;
+			sourceTree = "<group>";
+		};
+		830606201329BFEB0076F243 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				830606211329BFEB0076F243 /* drop_icon_view.rb */,
+				830606221329BFEB0076F243 /* drop_view.rb */,
+			);
+			name = Views;
+			path = views;
+			sourceTree = "<group>";
+		};
+		830606381329C5FD0076F243 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				830606391329C5FD0076F243 /* core_ext.rb */,
+				8306063A1329C5FD0076F243 /* Thud */,
+				830606641329C5FD0076F243 /* thud.rb */,
+				830606651329C5FD0076F243 /* Tuml */,
+				830606721329C5FD0076F243 /* tuml.rb */,
+			);
+			name = Library;
+			path = lib;
+			sourceTree = SOURCE_ROOT;
+		};
+		8306063A1329C5FD0076F243 /* Thud */ = {
+			isa = PBXGroup;
+			children = (
+				8306063B1329C5FD0076F243 /* context.rb */,
+				8306063C1329C5FD0076F243 /* helpers.rb */,
+				8306063D1329C5FD0076F243 /* page */,
+				830606461329C5FD0076F243 /* page.rb */,
+				830606471329C5FD0076F243 /* pages */,
+				830606501329C5FD0076F243 /* pages.rb */,
+				830606511329C5FD0076F243 /* post */,
+				830606581329C5FD0076F243 /* post.rb */,
+				830606591329C5FD0076F243 /* posts */,
+				830606621329C5FD0076F243 /* posts.rb */,
+			);
+			name = Thud;
+			path = thud;
+			sourceTree = "<group>";
+		};
+		8306063D1329C5FD0076F243 /* page */ = {
+			isa = PBXGroup;
+			children = (
+				8306063E1329C5FD0076F243 /* basic_variables.rb */,
+				8306063F1329C5FD0076F243 /* following.rb */,
+				830606401329C5FD0076F243 /* group_blogs.rb */,
+				830606411329C5FD0076F243 /* jump_pagination.rb */,
+				830606421329C5FD0076F243 /* likes.rb */,
+				830606431329C5FD0076F243 /* navigation.rb */,
+				830606441329C5FD0076F243 /* pages.rb */,
+				830606451329C5FD0076F243 /* twitter.rb */,
+			);
+			path = page;
+			sourceTree = "<group>";
+		};
+		830606471329C5FD0076F243 /* pages */ = {
+			isa = PBXGroup;
+			children = (
+				830606481329C5FD0076F243 /* ask.rb */,
+				830606491329C5FD0076F243 /* day.rb */,
+				8306064A1329C5FD0076F243 /* index.rb */,
+				8306064B1329C5FD0076F243 /* permalink.rb */,
+				8306064C1329C5FD0076F243 /* search.rb */,
+				8306064D1329C5FD0076F243 /* static.rb */,
+				8306064E1329C5FD0076F243 /* submit.rb */,
+				8306064F1329C5FD0076F243 /* tag.rb */,
+			);
+			path = pages;
+			sourceTree = "<group>";
+		};
+		830606511329C5FD0076F243 /* post */ = {
+			isa = PBXGroup;
+			children = (
+				830606521329C5FD0076F243 /* author.rb */,
+				830606531329C5FD0076F243 /* basic_variables.rb */,
+				830606541329C5FD0076F243 /* date.rb */,
+				830606551329C5FD0076F243 /* permalink_navigation.rb */,
+				830606561329C5FD0076F243 /* reblogs.rb */,
+				830606571329C5FD0076F243 /* tags.rb */,
+			);
+			path = post;
+			sourceTree = "<group>";
+		};
+		830606591329C5FD0076F243 /* posts */ = {
+			isa = PBXGroup;
+			children = (
+				8306065A1329C5FD0076F243 /* answer.rb */,
+				8306065B1329C5FD0076F243 /* audio.rb */,
+				8306065C1329C5FD0076F243 /* chat.rb */,
+				8306065D1329C5FD0076F243 /* link.rb */,
+				8306065E1329C5FD0076F243 /* photo.rb */,
+				8306065F1329C5FD0076F243 /* quote.rb */,
+				830606601329C5FD0076F243 /* text.rb */,
+				830606611329C5FD0076F243 /* video.rb */,
+			);
+			path = posts;
+			sourceTree = "<group>";
+		};
+		830606651329C5FD0076F243 /* Tuml */ = {
+			isa = PBXGroup;
+			children = (
+				830606661329C5FD0076F243 /* engine.rb */,
+				830606671329C5FD0076F243 /* filters */,
+				8306066A1329C5FD0076F243 /* filters.rb */,
+				8306066B1329C5FD0076F243 /* generator.rb */,
+				8306066C1329C5FD0076F243 /* helpers.rb */,
+				8306066D1329C5FD0076F243 /* lang.rb */,
+				8306066E1329C5FD0076F243 /* lang.tt */,
+				8306066F1329C5FD0076F243 /* parser.rb */,
+				830606701329C5FD0076F243 /* template.rb */,
+			);
+			name = Tuml;
+			path = tuml;
+			sourceTree = "<group>";
+		};
+		830606671329C5FD0076F243 /* filters */ = {
+			isa = PBXGroup;
+			children = (
+				830606681329C5FD0076F243 /* block_filter.rb */,
+				830606691329C5FD0076F243 /* scope_filter.rb */,
+			);
+			path = filters;
+			sourceTree = "<group>";
+		};
+		830606A61329C6860076F243 /* Spec */ = {
+			isa = PBXGroup;
+			children = (
+				830606A71329C6860076F243 /* spec_helper.rb */,
+				830606A81329C6860076F243 /* Thud */,
+				830606BE1329C6860076F243 /* Tuml */,
+			);
+			name = Spec;
+			path = spec;
+			sourceTree = SOURCE_ROOT;
+		};
+		830606A81329C6860076F243 /* Thud */ = {
+			isa = PBXGroup;
+			children = (
+				830606A91329C6860076F243 /* fixtures */,
+				830606B11329C6860076F243 /* page */,
+				830606B31329C6860076F243 /* pages */,
+				830606B61329C6860076F243 /* post */,
+				830606B91329C6860076F243 /* posts */,
+			);
+			name = Thud;
+			path = thud;
+			sourceTree = "<group>";
+		};
+		830606A91329C6860076F243 /* fixtures */ = {
+			isa = PBXGroup;
+			children = (
+				830606AA1329C6860076F243 /* dearcoketalk.json */,
+				830606AB1329C6860076F243 /* hacker.json */,
+				830606AC1329C6860076F243 /* manicalrage.json */,
+				830606AD1329C6860076F243 /* marco.json */,
+				830606AE1329C6860076F243 /* merlin.json */,
+				830606AF1329C6860076F243 /* poacher.json */,
+				830606B01329C6860076F243 /* staff.json */,
+			);
+			path = fixtures;
+			sourceTree = "<group>";
+		};
+		830606B11329C6860076F243 /* page */ = {
+			isa = PBXGroup;
+			children = (
+				830606B21329C6860076F243 /* basic_variables_spec.rb */,
+			);
+			path = page;
+			sourceTree = "<group>";
+		};
+		830606B31329C6860076F243 /* pages */ = {
+			isa = PBXGroup;
+			children = (
+				830606B41329C6860076F243 /* index_spec.rb */,
+				830606B51329C6860076F243 /* permalink_spec.rb */,
+			);
+			path = pages;
+			sourceTree = "<group>";
+		};
+		830606B61329C6860076F243 /* post */ = {
+			isa = PBXGroup;
+			children = (
+				830606B71329C6860076F243 /* date_spec.rb */,
+				830606B81329C6860076F243 /* tags_spec.rb */,
+			);
+			path = post;
+			sourceTree = "<group>";
+		};
+		830606B91329C6860076F243 /* posts */ = {
+			isa = PBXGroup;
+			children = (
+				830606BA1329C6860076F243 /* answer_spec.rb */,
+				830606BB1329C6860076F243 /* audio_spec.rb */,
+				830606BC1329C6860076F243 /* chat_spec.rb */,
+				830606BD1329C6860076F243 /* quote_spec.rb */,
+			);
+			path = posts;
+			sourceTree = "<group>";
+		};
+		830606BE1329C6860076F243 /* Tuml */ = {
+			isa = PBXGroup;
+			children = (
+				830606BF1329C6860076F243 /* filters */,
+				830606C21329C6860076F243 /* generator_spec.rb */,
+				830606C31329C6860076F243 /* lang_spec.rb */,
+			);
+			name = Tuml;
+			path = tuml;
+			sourceTree = "<group>";
+		};
+		830606BF1329C6860076F243 /* filters */ = {
+			isa = PBXGroup;
+			children = (
+				830606C01329C6860076F243 /* block_filter_spec.rb */,
+				830606C11329C6860076F243 /* scope_filter_spec.rb */,
+			);
+			path = filters;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		830605D91329A4630076F243 /* Rollr */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 830605F61329A4640076F243 /* Build configuration list for PBXNativeTarget "Rollr" */;
+			buildPhases = (
+				830605D61329A4630076F243 /* Sources */,
+				830605D71329A4630076F243 /* Frameworks */,
+				830605D81329A4630076F243 /* Resources */,
+				8315D0781329CD4F00F634CA /* Copy Lib Files */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Rollr;
+			productName = Rollr;
+			productReference = 830605DA1329A4630076F243 /* Rollr.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		830605CF1329A4200076F243 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "Chris Lloyd";
+			};
+			buildConfigurationList = 830605D21329A4200076F243 /* Build configuration list for PBXProject "Rollr" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 830605CD1329A4200076F243;
+			productRefGroup = 830605DB1329A4630076F243 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				830605D91329A4630076F243 /* Rollr */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		830605D81329A4630076F243 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				830606001329A5060076F243 /* main.rb in Resources */,
+				830606041329A52C0076F243 /* Icon.icns in Resources */,
+				830606231329BFEB0076F243 /* app_controller.rb in Resources */,
+				830606241329BFEB0076F243 /* app_delegate.rb in Resources */,
+				830606251329BFEB0076F243 /* server.rb in Resources */,
+				830606261329BFEB0076F243 /* template.rb in Resources */,
+				830606271329BFEB0076F243 /* drop_icon_view.rb in Resources */,
+				830606281329BFEB0076F243 /* drop_view.rb in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8315D0781329CD4F00F634CA /* Copy Lib Files */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Lib Files";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/bin/cp -R $SRCROOT/lib $TARGET_BUILD_DIR/$UNLOCALIZED_RESOURCES_FOLDER_PATH\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		830605D61329A4630076F243 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				830605EC1329A4630076F243 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		830605D41329A4200076F243 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		830605D51329A4200076F243 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		830605F71329A4640076F243 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_ENABLE_OBJC_GC = supported;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		830605F81329A4640076F243 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_ENABLE_OBJC_GC = supported;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		830605D21329A4200076F243 /* Build configuration list for PBXProject "Rollr" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				830605D41329A4200076F243 /* Debug */,
+				830605D51329A4200076F243 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		830605F61329A4640076F243 /* Build configuration list for PBXNativeTarget "Rollr" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				830605F71329A4640076F243 /* Debug */,
+				830605F81329A4640076F243 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 830605CF1329A4200076F243 /* Project object */;
+}
