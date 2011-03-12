@@ -1,5 +1,0 @@
-require 'thud/context'
-require 'thud/post'
-require 'thud/posts'
-require 'thud/page'
-require 'thud/pages'

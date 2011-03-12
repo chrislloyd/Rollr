@@ -1,6 +1,6 @@
 require 'bundler'
-Bundler.setup :development, :test
-Bundler.require :development, :test
+Bundler.setup :dev, :test
+Bundler.require :dev, :test
 
 require 'rake/clean'
 require 'rspec/core/rake_task'

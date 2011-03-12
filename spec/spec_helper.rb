@@ -1,8 +1,10 @@
 $LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
 require 'bundler'
+Bundler.setup :test
+Bundler.require :test
 
-require 'rspec'
 require 'json'
+require 'tuml'
 require 'thud'
 
 FIXTURES = Pathname(__FILE__).dirname.join('fixtures')

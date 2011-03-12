@@ -1,8 +1,0 @@
-require 'thud/posts/answer'
-require 'thud/posts/audio'
-require 'thud/posts/chat'
-require 'thud/posts/link'
-require 'thud/posts/photo'
-require 'thud/posts/quote'
-require 'thud/posts/text'
-require 'thud/posts/video'
