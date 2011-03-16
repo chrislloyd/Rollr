@@ -20,7 +20,7 @@
 		8319A2B2132B7F33000531C3 /* UserTemplate.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8319A2AA132B7F33000531C3 /* UserTemplate.rb */; };
 		8319A2B3132B7F33000531C3 /* VideoPost.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8319A2AB132B7F33000531C3 /* VideoPost.rb */; };
 		8319A2B4132B7F33000531C3 /* WebView.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8319A2AC132B7F33000531C3 /* WebView.rb */; };
-		8319A2C5132B7F4A000531C3 /* DropIconView.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8319A2B5132B7F4A000531C3 /* DropIconView.rb */; };
+		8319A2C5132B7F4A000531C3 /* ArrowView.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8319A2B5132B7F4A000531C3 /* ArrowView.rb */; };
 		8319A2C6132B7F4A000531C3 /* DropView.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8319A2B6132B7F4A000531C3 /* DropView.rb */; };
 		8319A2C7132B7F4A000531C3 /* Engine.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8319A2B7132B7F4A000531C3 /* Engine.rb */; };
 		8319A2C8132B7F4A000531C3 /* Generator.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8319A2B8132B7F4A000531C3 /* Generator.rb */; };
@@ -46,6 +46,7 @@
 		8319A2E6132B7F51000531C3 /* CoreExt.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8319A2DC132B7F51000531C3 /* CoreExt.rb */; };
 		8319A2E7132B7F51000531C3 /* CustomPage.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8319A2DD132B7F51000531C3 /* CustomPage.rb */; };
 		8319A2E8132B7F51000531C3 /* DayPage.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8319A2DE132B7F51000531C3 /* DayPage.rb */; };
+		837EA736132E30160001DA76 /* OptionsView.rb in Resources */ = {isa = PBXBuildFile; fileRef = 837EA735132E30160001DA76 /* OptionsView.rb */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,40 +82,41 @@
 		830606C21329C6860076F243 /* generator_spec.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = generator_spec.rb; sourceTree = "<group>"; };
 		830606C31329C6860076F243 /* lang_spec.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = lang_spec.rb; sourceTree = "<group>"; };
 		830606CA1329C7520076F243 /* Rakefile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Rakefile; sourceTree = "<group>"; };
-		8319A2A5132B7F33000531C3 /* SubmitPage.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = SubmitPage.rb; sourceTree = SOURCE_ROOT; };
-		8319A2A6132B7F33000531C3 /* TagPage.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = TagPage.rb; sourceTree = SOURCE_ROOT; };
-		8319A2A7132B7F33000531C3 /* Template.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = Template.rb; sourceTree = SOURCE_ROOT; };
-		8319A2A8132B7F33000531C3 /* TemplateContext.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = TemplateContext.rb; sourceTree = SOURCE_ROOT; };
-		8319A2A9132B7F33000531C3 /* TextPost.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = TextPost.rb; sourceTree = SOURCE_ROOT; };
-		8319A2AA132B7F33000531C3 /* UserTemplate.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = UserTemplate.rb; sourceTree = SOURCE_ROOT; };
-		8319A2AB132B7F33000531C3 /* VideoPost.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = VideoPost.rb; sourceTree = SOURCE_ROOT; };
-		8319A2AC132B7F33000531C3 /* WebView.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = WebView.rb; sourceTree = SOURCE_ROOT; };
-		8319A2B5132B7F4A000531C3 /* DropIconView.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = DropIconView.rb; sourceTree = SOURCE_ROOT; };
-		8319A2B6132B7F4A000531C3 /* DropView.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = DropView.rb; sourceTree = SOURCE_ROOT; };
-		8319A2B7132B7F4A000531C3 /* Engine.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = Engine.rb; sourceTree = SOURCE_ROOT; };
-		8319A2B8132B7F4A000531C3 /* Generator.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = Generator.rb; sourceTree = SOURCE_ROOT; };
-		8319A2B9132B7F4A000531C3 /* helpers.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = helpers.rb; sourceTree = SOURCE_ROOT; };
-		8319A2BA132B7F4A000531C3 /* IndexPage.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = IndexPage.rb; sourceTree = SOURCE_ROOT; };
-		8319A2BB132B7F4A000531C3 /* LinkPost.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = LinkPost.rb; sourceTree = SOURCE_ROOT; };
-		8319A2BC132B7F4A000531C3 /* MainWindow.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = MainWindow.rb; sourceTree = SOURCE_ROOT; };
-		8319A2BD132B7F4A000531C3 /* Page.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = Page.rb; sourceTree = SOURCE_ROOT; };
-		8319A2BE132B7F4A000531C3 /* Parser.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = Parser.rb; sourceTree = SOURCE_ROOT; };
-		8319A2BF132B7F4A000531C3 /* PermalinkPage.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = PermalinkPage.rb; sourceTree = SOURCE_ROOT; };
-		8319A2C0132B7F4A000531C3 /* PhotoPost.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = PhotoPost.rb; sourceTree = SOURCE_ROOT; };
-		8319A2C1132B7F4A000531C3 /* Post.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = Post.rb; sourceTree = SOURCE_ROOT; };
-		8319A2C2132B7F4A000531C3 /* QuotePost.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = QuotePost.rb; sourceTree = SOURCE_ROOT; };
-		8319A2C3132B7F4A000531C3 /* ScopeFilter.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = ScopeFilter.rb; sourceTree = SOURCE_ROOT; };
-		8319A2C4132B7F4A000531C3 /* SearchPage.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = SearchPage.rb; sourceTree = SOURCE_ROOT; };
-		8319A2D5132B7F51000531C3 /* AnswerPost.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = AnswerPost.rb; sourceTree = SOURCE_ROOT; };
-		8319A2D6132B7F51000531C3 /* AppController.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = AppController.rb; sourceTree = SOURCE_ROOT; };
-		8319A2D7132B7F51000531C3 /* AppDelegate.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = AppDelegate.rb; sourceTree = SOURCE_ROOT; };
-		8319A2D8132B7F51000531C3 /* AskPage.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = AskPage.rb; sourceTree = SOURCE_ROOT; };
-		8319A2D9132B7F51000531C3 /* AudioPost.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = AudioPost.rb; sourceTree = SOURCE_ROOT; };
-		8319A2DA132B7F51000531C3 /* BlockFilter.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = BlockFilter.rb; sourceTree = SOURCE_ROOT; };
-		8319A2DB132B7F51000531C3 /* ChatPost.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = ChatPost.rb; sourceTree = SOURCE_ROOT; };
-		8319A2DC132B7F51000531C3 /* CoreExt.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = CoreExt.rb; sourceTree = SOURCE_ROOT; };
-		8319A2DD132B7F51000531C3 /* CustomPage.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = CustomPage.rb; sourceTree = SOURCE_ROOT; };
-		8319A2DE132B7F51000531C3 /* DayPage.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = DayPage.rb; sourceTree = SOURCE_ROOT; };
+		8319A2A5132B7F33000531C3 /* SubmitPage.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = SubmitPage.rb; path = ./SubmitPage.rb; sourceTree = "<group>"; };
+		8319A2A6132B7F33000531C3 /* TagPage.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = TagPage.rb; path = ./TagPage.rb; sourceTree = "<group>"; };
+		8319A2A7132B7F33000531C3 /* Template.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = Template.rb; path = ./Template.rb; sourceTree = "<group>"; };
+		8319A2A8132B7F33000531C3 /* TemplateContext.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = TemplateContext.rb; path = ./TemplateContext.rb; sourceTree = "<group>"; };
+		8319A2A9132B7F33000531C3 /* TextPost.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = TextPost.rb; path = ./TextPost.rb; sourceTree = "<group>"; };
+		8319A2AA132B7F33000531C3 /* UserTemplate.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = UserTemplate.rb; sourceTree = "<group>"; };
+		8319A2AB132B7F33000531C3 /* VideoPost.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = VideoPost.rb; path = ./VideoPost.rb; sourceTree = "<group>"; };
+		8319A2AC132B7F33000531C3 /* WebView.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = WebView.rb; sourceTree = "<group>"; };
+		8319A2B5132B7F4A000531C3 /* ArrowView.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = ArrowView.rb; sourceTree = "<group>"; };
+		8319A2B6132B7F4A000531C3 /* DropView.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = DropView.rb; sourceTree = "<group>"; };
+		8319A2B7132B7F4A000531C3 /* Engine.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = Engine.rb; path = ./Engine.rb; sourceTree = "<group>"; };
+		8319A2B8132B7F4A000531C3 /* Generator.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = Generator.rb; path = ./Generator.rb; sourceTree = "<group>"; };
+		8319A2B9132B7F4A000531C3 /* helpers.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = helpers.rb; path = ./helpers.rb; sourceTree = "<group>"; };
+		8319A2BA132B7F4A000531C3 /* IndexPage.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = IndexPage.rb; path = ./IndexPage.rb; sourceTree = "<group>"; };
+		8319A2BB132B7F4A000531C3 /* LinkPost.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = LinkPost.rb; path = ./LinkPost.rb; sourceTree = "<group>"; };
+		8319A2BC132B7F4A000531C3 /* MainWindow.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = MainWindow.rb; sourceTree = "<group>"; };
+		8319A2BD132B7F4A000531C3 /* Page.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = Page.rb; path = ./Page.rb; sourceTree = "<group>"; };
+		8319A2BE132B7F4A000531C3 /* Parser.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = Parser.rb; path = ./Parser.rb; sourceTree = "<group>"; };
+		8319A2BF132B7F4A000531C3 /* PermalinkPage.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = PermalinkPage.rb; path = ./PermalinkPage.rb; sourceTree = "<group>"; };
+		8319A2C0132B7F4A000531C3 /* PhotoPost.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = PhotoPost.rb; path = ./PhotoPost.rb; sourceTree = "<group>"; };
+		8319A2C1132B7F4A000531C3 /* Post.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = Post.rb; path = ./Post.rb; sourceTree = "<group>"; };
+		8319A2C2132B7F4A000531C3 /* QuotePost.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = QuotePost.rb; path = ./QuotePost.rb; sourceTree = "<group>"; };
+		8319A2C3132B7F4A000531C3 /* ScopeFilter.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = ScopeFilter.rb; path = ./ScopeFilter.rb; sourceTree = "<group>"; };
+		8319A2C4132B7F4A000531C3 /* SearchPage.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = SearchPage.rb; path = ./SearchPage.rb; sourceTree = "<group>"; };
+		8319A2D5132B7F51000531C3 /* AnswerPost.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = AnswerPost.rb; path = ./AnswerPost.rb; sourceTree = "<group>"; };
+		8319A2D6132B7F51000531C3 /* AppController.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = AppController.rb; sourceTree = "<group>"; };
+		8319A2D7132B7F51000531C3 /* AppDelegate.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = AppDelegate.rb; sourceTree = "<group>"; };
+		8319A2D8132B7F51000531C3 /* AskPage.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = AskPage.rb; path = ./AskPage.rb; sourceTree = "<group>"; };
+		8319A2D9132B7F51000531C3 /* AudioPost.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = AudioPost.rb; path = ./AudioPost.rb; sourceTree = "<group>"; };
+		8319A2DA132B7F51000531C3 /* BlockFilter.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = BlockFilter.rb; path = ./BlockFilter.rb; sourceTree = "<group>"; };
+		8319A2DB132B7F51000531C3 /* ChatPost.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = ChatPost.rb; path = ./ChatPost.rb; sourceTree = "<group>"; };
+		8319A2DC132B7F51000531C3 /* CoreExt.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = CoreExt.rb; sourceTree = "<group>"; };
+		8319A2DD132B7F51000531C3 /* CustomPage.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = CustomPage.rb; path = ./CustomPage.rb; sourceTree = "<group>"; };
+		8319A2DE132B7F51000531C3 /* DayPage.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = DayPage.rb; path = ./DayPage.rb; sourceTree = "<group>"; };
+		837EA735132E30160001DA76 /* OptionsView.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = OptionsView.rb; path = ../Rollr/OptionsView.rb; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,8 @@
 			isa = PBXGroup;
 			children = (
 				830605E41329A4630076F243 /* Rollr */,
+				83564A44132C213500BAE819 /* Thud */,
+				83564A45132C214400BAE819 /* Tuml */,
 				830606A61329C6860076F243 /* Spec */,
 				830605DD1329A4630076F243 /* Frameworks */,
 				830605DB1329A4630076F243 /* Products */,
@@ -162,41 +166,16 @@
 		830605E41329A4630076F243 /* Rollr */ = {
 			isa = PBXGroup;
 			children = (
-				8319A2A5132B7F33000531C3 /* SubmitPage.rb */,
-				8319A2A6132B7F33000531C3 /* TagPage.rb */,
-				8319A2A7132B7F33000531C3 /* Template.rb */,
-				8319A2A8132B7F33000531C3 /* TemplateContext.rb */,
-				8319A2A9132B7F33000531C3 /* TextPost.rb */,
-				8319A2D5132B7F51000531C3 /* AnswerPost.rb */,
 				8319A2D6132B7F51000531C3 /* AppController.rb */,
 				8319A2D7132B7F51000531C3 /* AppDelegate.rb */,
-				8319A2D8132B7F51000531C3 /* AskPage.rb */,
-				8319A2D9132B7F51000531C3 /* AudioPost.rb */,
-				8319A2DA132B7F51000531C3 /* BlockFilter.rb */,
-				8319A2DB132B7F51000531C3 /* ChatPost.rb */,
 				8319A2DC132B7F51000531C3 /* CoreExt.rb */,
-				8319A2DD132B7F51000531C3 /* CustomPage.rb */,
-				8319A2DE132B7F51000531C3 /* DayPage.rb */,
 				8319A2AA132B7F33000531C3 /* UserTemplate.rb */,
-				8319A2AB132B7F33000531C3 /* VideoPost.rb */,
 				8319A2AC132B7F33000531C3 /* WebView.rb */,
-				8319A2B5132B7F4A000531C3 /* DropIconView.rb */,
+				8319A2B5132B7F4A000531C3 /* ArrowView.rb */,
 				8319A2B6132B7F4A000531C3 /* DropView.rb */,
-				8319A2B7132B7F4A000531C3 /* Engine.rb */,
-				8319A2B8132B7F4A000531C3 /* Generator.rb */,
-				8319A2B9132B7F4A000531C3 /* helpers.rb */,
-				8319A2BA132B7F4A000531C3 /* IndexPage.rb */,
-				8319A2BB132B7F4A000531C3 /* LinkPost.rb */,
 				8319A2BC132B7F4A000531C3 /* MainWindow.rb */,
-				8319A2BD132B7F4A000531C3 /* Page.rb */,
-				8319A2BE132B7F4A000531C3 /* Parser.rb */,
-				8319A2BF132B7F4A000531C3 /* PermalinkPage.rb */,
-				8319A2C0132B7F4A000531C3 /* PhotoPost.rb */,
-				8319A2C1132B7F4A000531C3 /* Post.rb */,
-				8319A2C2132B7F4A000531C3 /* QuotePost.rb */,
-				8319A2C3132B7F4A000531C3 /* ScopeFilter.rb */,
-				8319A2C4132B7F4A000531C3 /* SearchPage.rb */,
 				830605E51329A4630076F243 /* Supporting Files */,
+				837EA735132E30160001DA76 /* OptionsView.rb */,
 			);
 			name = Rollr;
 			path = .;
@@ -310,6 +289,46 @@
 			path = filters;
 			sourceTree = "<group>";
 		};
+		83564A44132C213500BAE819 /* Thud */ = {
+			isa = PBXGroup;
+			children = (
+				8319A2A5132B7F33000531C3 /* SubmitPage.rb */,
+				8319A2A6132B7F33000531C3 /* TagPage.rb */,
+				8319A2A8132B7F33000531C3 /* TemplateContext.rb */,
+				8319A2A9132B7F33000531C3 /* TextPost.rb */,
+				8319A2D5132B7F51000531C3 /* AnswerPost.rb */,
+				8319A2D8132B7F51000531C3 /* AskPage.rb */,
+				8319A2D9132B7F51000531C3 /* AudioPost.rb */,
+				8319A2DB132B7F51000531C3 /* ChatPost.rb */,
+				8319A2DD132B7F51000531C3 /* CustomPage.rb */,
+				8319A2DE132B7F51000531C3 /* DayPage.rb */,
+				8319A2AB132B7F33000531C3 /* VideoPost.rb */,
+				8319A2BA132B7F4A000531C3 /* IndexPage.rb */,
+				8319A2BB132B7F4A000531C3 /* LinkPost.rb */,
+				8319A2BD132B7F4A000531C3 /* Page.rb */,
+				8319A2BF132B7F4A000531C3 /* PermalinkPage.rb */,
+				8319A2C0132B7F4A000531C3 /* PhotoPost.rb */,
+				8319A2C1132B7F4A000531C3 /* Post.rb */,
+				8319A2C2132B7F4A000531C3 /* QuotePost.rb */,
+				8319A2C4132B7F4A000531C3 /* SearchPage.rb */,
+			);
+			name = Thud;
+			sourceTree = "<group>";
+		};
+		83564A45132C214400BAE819 /* Tuml */ = {
+			isa = PBXGroup;
+			children = (
+				8319A2A7132B7F33000531C3 /* Template.rb */,
+				8319A2DA132B7F51000531C3 /* BlockFilter.rb */,
+				8319A2B7132B7F4A000531C3 /* Engine.rb */,
+				8319A2B8132B7F4A000531C3 /* Generator.rb */,
+				8319A2B9132B7F4A000531C3 /* helpers.rb */,
+				8319A2BE132B7F4A000531C3 /* Parser.rb */,
+				8319A2C3132B7F4A000531C3 /* ScopeFilter.rb */,
+			);
+			name = Tuml;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -370,7 +389,7 @@
 				8319A2B2132B7F33000531C3 /* UserTemplate.rb in Resources */,
 				8319A2B3132B7F33000531C3 /* VideoPost.rb in Resources */,
 				8319A2B4132B7F33000531C3 /* WebView.rb in Resources */,
-				8319A2C5132B7F4A000531C3 /* DropIconView.rb in Resources */,
+				8319A2C5132B7F4A000531C3 /* ArrowView.rb in Resources */,
 				8319A2C6132B7F4A000531C3 /* DropView.rb in Resources */,
 				8319A2C7132B7F4A000531C3 /* Engine.rb in Resources */,
 				8319A2C8132B7F4A000531C3 /* Generator.rb in Resources */,
@@ -396,6 +415,7 @@
 				8319A2E6132B7F51000531C3 /* CoreExt.rb in Resources */,
 				8319A2E7132B7F51000531C3 /* CustomPage.rb in Resources */,
 				8319A2E8132B7F51000531C3 /* DayPage.rb in Resources */,
+				837EA736132E30160001DA76 /* OptionsView.rb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

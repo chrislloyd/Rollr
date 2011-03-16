@@ -11,27 +11,27 @@ class WebView < Sinatra::Base
       render :tuml, *args
     end
 
-    def data
-      @data = JSON.parse File.read(settings.data_path)
-    end
-
     def template
       settings.template_path
     end
 
+    def data
+      JSON.parse File.read(settings.data_path)
+    end
+
     def asset name
-      File.read File.join(Rollr.dir, 'rollr', 'assets', name)
+      File.join NSBundle.mainBundle.resourcePath.fileSystemRepresentation, name
     end
 
   end
 
 
   before do
-    @root = Page.new nil, data
+    @root = Page.new data
   end
 
   get '/' do
-    tuml settings.template_path, :scope => IndexPage.new(@root)
+    tuml template, :scope => IndexPage.new(@root)
   end
 
   get '/page/:n' do |n|
@@ -82,7 +82,7 @@ class WebView < Sinatra::Base
 
   get '/__rollr__.css' do
     content_type :css
-    asset('rollr.css')
+    File.read asset('rollr.css')
   end
 
 end

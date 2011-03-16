@@ -1,22 +1,22 @@
-class DropIconView < NSView
+class ArrowView < NSView
   attr_accessor :outline_rect
 
   OUTLINE = 2#px
   OUTLINE_RADIUS = 16#px
 
-  TUMBLR_BLUE = NSColor.colorWithCalibratedRed(0.138, green:0.211, blue:0.320, alpha: 1.0)
-
-  attr_accessor :focus_color, :default_color
-
-  def awakeFromNib
-    self.outline_rect = NSMakeRect 0 + OUTLINE/2,
-                                   0 + OUTLINE/2,
-                                   frame.size.width - OUTLINE,
-                                   frame.size.height - OUTLINE
+  def initWithFrame *args
+    super.tap do |val|
+      self.outline_rect = NSMakeRect 0 + OUTLINE/2,
+                                     0 + OUTLINE/2,
+                                     frame.size.width - OUTLINE,
+                                     frame.size.height - OUTLINE
+    end
   end
 
   def drawRect rect
-    (@focus ? focus_color : default_color).setStroke
+    color = @focus ? DropView::FOCUS_STROKE_COLOR : DropView::STROKE_COLOR
+    color.setStroke
+    color.setFill
 
     ## Outline
     outline = NSBezierPath.bezierPathWithRoundedRect outline_rect,
@@ -57,6 +57,8 @@ class DropIconView < NSView
     end
 
     arrow.closePath
+
+    arrow.fill
 
     arrow.lineWidth = OUTLINE
     arrow.lineJoinStyle = NSRoundLineJoinStyle

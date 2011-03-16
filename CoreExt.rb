@@ -1,15 +1,3 @@
-# module Kernel
-#
-#
-#
-#   def require_all glob
-#     Dir[File.join(__DIR__, glob)].map {|path| File.basename(path, File.extname(path))}.
-#     reject {|file| file == File.basename(__FILE__)}.
-#     each {|file| require file}
-#   end
-#
-# end
-
 class Symbol
 
   def to_selector
@@ -21,11 +9,11 @@ end
 class NSObject
 
   # Usage:
-  #   bind 'Yo', :stop_server, from: obj
-  def bind name, method, opts={}
+  #   bind :stop_server, from: obj, named: 'Yo'
+  def bind method, opts
     NSNotificationCenter.defaultCenter.addObserver self,
       selector: method.to_selector,
-      name: name,
+      name: opts[:named],
       object: opts[:from]
   end
 
@@ -43,13 +31,31 @@ class NSObject
 
 end
 
-# class ControlTower::RackSocket
-#   def open?
-#     @status == :open
-#   end
-# end
+class NSResponder
 
-# TODO Bug in Macruby
+  def acceptsFirstResponder= val
+    (@acceptsFirstResponder = val).tap do
+      instance_eval do
+        def acceptsFirstResponder
+          @acceptsFirstResponder
+        end
+        self
+      end
+    end
+  end
+
+end
+
+# TODO LONGTERM Contribute methods back to ControlTower.
+#   Really, the only use case for ControlTower is embedded inside applications
+#   so it makes sense for it to have great start/stop/querying.
+class ControlTower::RackSocket
+  def open?
+    @status == :open
+  end
+end
+
+# BUG Macruby
 class Temple::Filter
   def self.default_options
     {}

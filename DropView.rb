@@ -2,18 +2,30 @@ class DropView < NSBox
   attr_accessor :path_url
   attr_writer :icon
 
-  FOCUS_FILL_COLOR = NSColor.colorWithCalibratedRed 0.663, green:0.788, blue:1.000, alpha:1.000
+  FILL_COLOR = NSColor.whiteColor
+  STROKE_COLOR = NSColor.colorWithCalibratedRed 0.425, green:0.425, blue:0.425, alpha:1.000
 
-  GRAY_COLOR = NSColor.colorWithCalibratedRed 0.425, green:0.425, blue:0.425, alpha:1.000
+  FOCUS_FILL_COLOR = NSColor.colorWithCalibratedRed 0.663, green:0.788, blue:1.000, alpha:1.000
+  FOCUS_STROKE_COLOR = NSColor.whiteColor
+
+  attr_reader :icon
 
   # TODO: NSFilenamesPboardType is a hack, it accepts any type of file. It
   #       should only accept .tuml files.
-  def awakeFromNib
-    registerForDraggedTypes [NSFilenamesPboardType]
+  def initWithFrame *args
+    super
 
-    icon.focus_color = NSColor.whiteColor
-    icon.default_color = GRAY_COLOR
+    self.boxType = NSBoxCustom
+    self.borderType = NSNoBorder
+    self.fillColor = FILL_COLOR
+
+    contentView.addSubview arrow_view
+    contentView.addSubview text
+
+    # registerForDraggedTypes ['com.tumblr.tuml']
+    registerForDraggedTypes [NSFilenamesPboardType]
   end
+
 
   def draggingEntered sender
     return NSDragOperationNone if sender.draggingSource == self
@@ -37,44 +49,57 @@ class DropView < NSBox
 
   def concludeDragOperation sender
     blur!
-    trigger 'DropViewConcludedDrag'
+    trigger 'Changed'
   end
 
   def show_file path
-    icon.hidden = true
-    image_view.image = NSWorkspace.sharedWorkspace.iconForFile(path).tap {|i|
-          i.size = NSSize.new(80.0, 80.0)
-        }
-    image_view.hidden = false
+    arrow_view.hidden = true
 
-    text.stringValue = File.basename path
+    @icon = NSWorkspace.sharedWorkspace.iconForFile(path).tap {|i|
+        i.size = NSSize.new(80.0, 80.0)
+      }
+
+    text.string = File.basename path
     contentView.needsDisplay = true
+  end
+
+  def drawRect rect
+    super
+
+    if arrow_view.hidden?
+      icon.drawInRect arrow_view.frame, fromRect: NSZeroRect, operation: NSCompositeSourceAtop, fraction: 1.0
+    end
   end
 
 private
 
   def focus!
     self.fillColor = FOCUS_FILL_COLOR
-    text.textColor = NSColor.whiteColor
-    icon.focus!
+    text.textColor = FOCUS_STROKE_COLOR
+    arrow_view.focus!
   end
 
   def blur!
-    self.fillColor = NSColor.whiteColor
-    text.textColor = GRAY_COLOR
-    icon.blur!
+    self.fillColor = FILL_COLOR
+    text.textColor = STROKE_COLOR
+    arrow_view.blur!
   end
 
-  def icon
-    @icon ||= contentView.subviews.find {|view| view.is_a? ArrowIconView}
-  end
-
-  def image_view
-    @image ||= contentView.subviews.find {|view| view.is_a? NSImageView}
+  def arrow_view
+    @arrow_view ||= ArrowView.alloc.initWithFrame([110, (22 - 5) + 12 + 12, 80, 80])
   end
 
   def text
-    @text ||= contentView.subviews.find {|view| view.is_a? NSTextField}
+    @text ||= NSTextView.alloc.initWithFrame([0, 22 - 5, 300, 12]).tap {|text|
+        text.insertText 'Drop template here'
+        text.editable = false
+        text.selectable = false
+
+        text.textColor = STROKE_COLOR
+        text.drawsBackground = false
+
+        text.setAlignment NSCenterTextAlignment, range: NSRange.new(0,text.textStorage.length)
+      }
   end
 
 end

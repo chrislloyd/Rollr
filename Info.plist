@@ -12,16 +12,14 @@
 				<string>tuml</string>
 			</array>
 			<key>CFBundleTypeMIMETypes</key>
-			<array>
-				<string>text/x-tuml</string>
-			</array>
+			<array/>
 			<key>CFBundleTypeName</key>
 			<string>Tumblr Markup</string>
 			<key>CFBundleTypeRole</key>
 			<string>Viewer</string>
 			<key>LSItemContentTypes</key>
 			<array>
-				<string>text.tuml</string>
+				<string>com.tumblr.tuml</string>
 			</array>
 		</dict>
 	</array>
@@ -54,21 +52,7 @@
 	<key>NSServices</key>
 	<array/>
 	<key>UTExportedTypeDeclarations</key>
-	<array>
-		<dict>
-			<key>UTTypeDescription</key>
-			<string>Tumblr Markup</string>
-			<key>UTTypeIdentifier</key>
-			<string>text.tuml</string>
-			<key>UTTypeTagSpecification</key>
-			<dict>
-				<key>public.filename-extension</key>
-				<array>
-					<string>tuml</string>
-				</array>
-			</dict>
-		</dict>
-	</array>
+	<array/>
 	<key>UTImportedTypeDeclarations</key>
 	<array/>
 </dict>

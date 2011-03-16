@@ -2,9 +2,7 @@ class AppDelegate
   attr_accessor :app_controller
 
   def applicationDidFinishLaunching notification
-    puts 'less awesome'
     self.app_controller = AppController.new
-    puts 'awesome'
   end
 
   def applicationWillTerminate notification
@@ -14,6 +12,11 @@ class AppDelegate
   def application application, openFile:file
     puts application
     puts file
+  end
+
+  def method_missing meth, *args, &blk
+    puts meth
+    super
   end
 
 end
