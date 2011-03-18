@@ -1,4 +1,4 @@
-grammar Lang
+grammar Tuml
 
   rule document
     (static / container)* {

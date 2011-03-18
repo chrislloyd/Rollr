@@ -61,3 +61,11 @@ class Temple::Filter
     {}
   end
 end
+
+class NSURL
+
+  def fetch &callback
+    HTTPRequest.start self, &callback
+  end
+
+end

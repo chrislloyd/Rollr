@@ -3,8 +3,12 @@ framework 'Cocoa'
 # Starts the app icon bouncing
 NSApplication.sharedApplication
 
+require 'json'
+
 require 'rubygems'
 require 'temple'
+require 'treetop'
+require 'sanitize'
 require 'sinatra/base'
 require 'control_tower'
 
@@ -12,7 +16,7 @@ require 'control_tower'
 
   CoreExt
 
-  Parser ScopeFilter BlockFilter Generator Engine Template
+  Tuml Parser ScopeFilter BlockFilter Generator Engine Template
 
   TemplateContext
   Post AnswerPost AudioPost ChatPost LinkPost PhotoPost QuotePost TextPost
@@ -20,8 +24,8 @@ require 'control_tower'
   Page AskPage CustomPage DayPage IndexPage PermalinkPage SearchPage
     SubmitPage TagPage
 
-  AppController AppDelegate ArrowView DropView MainWindow OptionsView
-    UserTemplate WebView
+  AppController AppDelegate ArrowView DropView HTTPRequest MainWindow
+    OptionsView UserTemplate WebView
 
 }.each {|lib| require lib}
 

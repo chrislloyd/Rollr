@@ -46,6 +46,8 @@
 		8319A2E6132B7F51000531C3 /* CoreExt.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8319A2DC132B7F51000531C3 /* CoreExt.rb */; };
 		8319A2E7132B7F51000531C3 /* CustomPage.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8319A2DD132B7F51000531C3 /* CustomPage.rb */; };
 		8319A2E8132B7F51000531C3 /* DayPage.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8319A2DE132B7F51000531C3 /* DayPage.rb */; };
+		8366831F1332C563007ED4B9 /* HTTPRequest.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8366831E1332C563007ED4B9 /* HTTPRequest.rb */; };
+		83668321133337BF007ED4B9 /* Tuml.rb in Resources */ = {isa = PBXBuildFile; fileRef = 83668320133337BF007ED4B9 /* Tuml.rb */; };
 		837EA736132E30160001DA76 /* OptionsView.rb in Resources */ = {isa = PBXBuildFile; fileRef = 837EA735132E30160001DA76 /* OptionsView.rb */; };
 /* End PBXBuildFile section */
 
@@ -116,6 +118,9 @@
 		8319A2DC132B7F51000531C3 /* CoreExt.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = CoreExt.rb; sourceTree = "<group>"; };
 		8319A2DD132B7F51000531C3 /* CustomPage.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = CustomPage.rb; path = ./CustomPage.rb; sourceTree = "<group>"; };
 		8319A2DE132B7F51000531C3 /* DayPage.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = DayPage.rb; path = ./DayPage.rb; sourceTree = "<group>"; };
+		8366831E1332C563007ED4B9 /* HTTPRequest.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = HTTPRequest.rb; sourceTree = "<group>"; };
+		83668320133337BF007ED4B9 /* Tuml.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = Tuml.rb; sourceTree = "<group>"; };
+		83668322133337D0007ED4B9 /* Tuml.tt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Tuml.tt; sourceTree = "<group>"; };
 		837EA735132E30160001DA76 /* OptionsView.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = OptionsView.rb; path = ../Rollr/OptionsView.rb; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -166,6 +171,9 @@
 		830605E41329A4630076F243 /* Rollr */ = {
 			isa = PBXGroup;
 			children = (
+				83668322133337D0007ED4B9 /* Tuml.tt */,
+				83668320133337BF007ED4B9 /* Tuml.rb */,
+				8366831E1332C563007ED4B9 /* HTTPRequest.rb */,
 				8319A2D6132B7F51000531C3 /* AppController.rb */,
 				8319A2D7132B7F51000531C3 /* AppDelegate.rb */,
 				8319A2DC132B7F51000531C3 /* CoreExt.rb */,
@@ -416,6 +424,8 @@
 				8319A2E7132B7F51000531C3 /* CustomPage.rb in Resources */,
 				8319A2E8132B7F51000531C3 /* DayPage.rb in Resources */,
 				837EA736132E30160001DA76 /* OptionsView.rb in Resources */,
+				8366831F1332C563007ED4B9 /* HTTPRequest.rb in Resources */,
+				83668321133337BF007ED4B9 /* Tuml.rb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

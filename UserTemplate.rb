@@ -45,64 +45,31 @@ class UserTemplate
   end
 
   def data_path
-    File.join(CACHE_DIR, "#{host}.json").tap do |path|
-      unless File.exist? path
-        trigger 'Loading' && @fetching = true
-
-        raw = fetch_and_format!
-        File.open(path, 'w') do |f|
-          f.write raw
-        end
-        @fetching = false
-      end
-    end
+    cache_path
   end
 
   def data_exists?
-    File.exist? data_path
+    File.exist? cache_path
   end
 
   def complete?
-    path && site && !@fetching && data_exists?
+    path && site && data_exists?
   end
 
-private
+  def fetch_and_cache_data!
+    puts 'starting fetch'
+    fetch_tumblr_api do |tumblelog|
+      puts 'got /api/read'
+      fetch_tumblr_pages_api do |pages|
 
-  def directory
-    File.dirname path
-  end
+        # tumblelog[:pages] = pages
+        #
+        File.open(cache_path, 'w') {|f| f.write tumblelog.to_json}
 
-  # TODO Refactor
-  def fetch_and_format!
-    api_read_url = NSURL.alloc.initWithScheme 'http', host: host,
-                                                      path: '/api/read/json'
-    api_pages_url = NSURL.alloc.initWithScheme 'http', host: host,
-                                                       path: '/api/pages'
+        trigger 'DataFetched'
+      end
+    end
 
-    # Default cache and 60s timeout
-    response = NSURLRequest.requestWithURL api_read_url
-
-    puts response.HTTPBody
-
-    # NSURLRequest.requestWithURL site, cachePolicy:timeoutInterval:
-    #
-    # # begin
-    # #   api_read_raw = RestClient.get api_read_url.to_s
-    # # rescue RestClient::Exception => e
-    # #   abort "Error fetching #{api_read_url}"
-    # # end
-    #
-    # api_read_raw.sub! /^var tumblr_api_read = /, ''
-    # api_read_raw.sub! /;$/, ''
-    #
-    # data = JSON.parse api_read_raw
-    #
-    # # begin
-    # #   api_pages_raw = RestClient.get api_pages_url.to_s
-    # # rescue RestClient::Exception => e
-    # #   abort "Error fetching #{api_pages_url}"
-    # # end
-    #
     # pages_doc = Nokogiri::XML(api_pages_raw)
     #
     # data['pages'] = pages_doc.xpath('//pages').children.to_a.map {|page|
@@ -121,6 +88,43 @@ private
     #   ).reject {|k,v| not v}
     # }
     # data
+  end
+
+private
+
+  def cache_path
+    File.join CACHE_DIR, "#{host}.json"
+  end
+
+  def directory
+    File.dirname path
+  end
+
+  def tumblr_api_url
+    NSURL.alloc.initWithScheme 'http', host: host, path: '/api/read/json'
+  end
+
+  def tumblr_pages_api_url
+    NSURL.alloc.initWithScheme 'http', host: host, path: '/api/pages'
+  end
+
+  def fetch_tumblr_api &callback
+    tumblr_api_url.fetch do |data|
+      payload = NSMutableString.alloc.initWithData(data, encoding: NSUTF8StringEncoding)
+
+      payload.sub! /^var tumblr_api_read = /, ''
+      payload.sub! /;$/, ''
+
+      callback.call JSON.parse(payload)
+    end
+  end
+
+  def fetch_tumblr_pages_api &callback
+    HTTPRequest.start tumblr_pages_api_url do |data|
+      payload = NSString.alloc.initWithData(data, encoding: NSUTF8StringEncoding)
+
+      callback.call payload
+    end
   end
 
 end

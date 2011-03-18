@@ -12,7 +12,7 @@ class WebView < Sinatra::Base
     end
 
     def template
-      settings.template_path
+      File.read settings.template_path
     end
 
     def data
@@ -31,7 +31,9 @@ class WebView < Sinatra::Base
   end
 
   get '/' do
-    tuml template, :scope => IndexPage.new(@root)
+    scope = IndexPage.new
+    scope.prototype = @root
+    tuml template, locals: {page: scope}
   end
 
   get '/page/:n' do |n|

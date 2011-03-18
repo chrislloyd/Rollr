@@ -1,13 +1,12 @@
-class IndexPage < TemplateContext
+class IndexPage < Page
 
   # TODO Allow options
   POSTS_PER_PAGE = 10
 
-  attr_accessor :page
+  attr_accessor :number
 
-  def initialize prototype, page=1
-    super prototype
-    self.page = page.to_i
+  def initialize number=1
+    self.number = number.to_i
   end
 
   block 'IndexPage' do

@@ -3,48 +3,42 @@ class Page < TemplateContext
   RSS_PATH = '/rss'
   DUMMY_CUSTOM_CSS = "#rollrdummy {};"
 
+
   ## Basic Variables
 
   # The HTML-safe title of your blog.
-  tag 'Title'
-  def title
+  tag 'Title' do
     sanitize blog['title']
   end
 
   # The description of your blog. (may include HTML)
-  tag 'Description'
-  def description
+  tag 'Description' do
     blog['description']
   end
 
   # The HTML-safe description of your blog. (use in META tag)
-  tag 'MetaDescription'
-  def meta_description
-    sanitize description
+  tag 'MetaDescription' do
+    sanitize tag('Description')
   end
 
   # RSS feed URL for your blog.
-  tag 'RSS'
-  def rss
+  tag 'RSS' do
     absolute_url RSS_PATH
   end
 
   # Favicon URL for your blog. Just the smallest portrait.
-  tag 'Favicon'
-  def favicon
-    portrait_url_16
+  tag 'Favicon' do
+    tag 'PortraitURL-16'
   end
 
   # Any custom CSS code added on your 'Customize Theme' screen.
-  tag 'CustomCSS'
-  def custom_css
+  tag 'CustomCSS' do
     DUMMY_CUSTOM_CSS
   end
 
   # Portrait photo URL for your blog.
   PORTRAIT_SIZES.each do |n|
-    tag "PortraitURL-#{n}"
-    define_method "portrait_url_#{n}" do
+    tag "PortraitURL-#{n}" do
       "/default_avatar_#{n}.gif"
     end
   end
@@ -53,8 +47,7 @@ class Page < TemplateContext
   ## Following
 
   # Rendered if you're following other blogs.
-  block 'Following'
-  def following
+  block 'Following' do
     false
   end
 
@@ -204,7 +197,8 @@ class Page < TemplateContext
 
   # Rendered for each custom page.
   block 'Pages' do
-    data['pages'].map {|page| CustomPage.new self, page}
+    # data['pages'].map {|page| CustomPage.new self, page}
+    []
   end
 
 

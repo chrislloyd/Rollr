@@ -5,26 +5,26 @@ class Post < TemplateContext
   def self.for prototype, post
     case post['type']
       when 'answer'
-        Posts::Answer
+        AnswerPost
       when 'audio'
-        Posts::Audio
+        AudioPost
       when 'chat'
-        Posts::Chat
+        ChatPost
       when 'link'
-        Posts::Link
+        LinkPost
       when 'photo'
-        Posts::Photo
+        PhotoPost
       when 'quote'
-        Posts::Quote
+        QuotePost
       when 'regular'
-        Posts::Text
+        TextPost
       when 'video'
-        Posts::Video
+        VideoPost
     end.new self.new(prototype, post), post
   end
 
   def initialize prototype, post
-    super prototype
+    self.prototype = prototype
     self.collection = data['posts']
     self.post = post
   end
@@ -34,7 +34,8 @@ class Post < TemplateContext
 
   # The permalink for a post.
   tag 'Permalink' do
-    local_url post['url']
+    # TODO local_url
+    post['url']
   end
 
   # A shorter URL that redirects to this post. For example:

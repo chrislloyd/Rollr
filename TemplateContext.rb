@@ -26,17 +26,21 @@ class TemplateContext
 
   end
 
-  # include Helpers
 
-  attr_accessor :prototype, :data
+  attr_accessor :prototype
+  attr_writer   :data
 
-  def initialize prototype, data = nil
-    self.prototype, self.data = prototype, data || prototype.data
+  def initialize data=nil
+    self.data = data
   end
 
+  def data
+    @data || prototype.data
+  end
 
   [:tags, :blocks].each do |type|
     define_method("find_#{type}") do |name|
+      # Block passed to fetch is "not-found" case.
       self.class.send(type).fetch(name.downcase) do
         if prototype
           prototype.send("find_#{type}", name)
