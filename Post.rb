@@ -2,8 +2,9 @@ class Post < TemplateContext
 
   attr_accessor :collection, :post
 
-  def self.for prototype, post
-    case post['type']
+  def self.for args={}
+    base = self.new args
+    case base.post['type']
       when 'answer'
         AnswerPost
       when 'audio'
@@ -20,15 +21,17 @@ class Post < TemplateContext
         TextPost
       when 'video'
         VideoPost
-    end.new self.new(prototype, post), post
+    end.new args.merge(prototype: base)
   end
 
-  def initialize prototype, post
-    self.prototype = prototype
-    self.collection = data['posts']
-    self.post = post
+  def initialize args={}
+    super
+    self.post = args[:post]
   end
 
+  def collection
+    data['posts']
+  end
 
   ## Basic Variables
 

@@ -5,8 +5,9 @@ class IndexPage < Page
 
   attr_accessor :number
 
-  def initialize number=1
-    self.number = number.to_i
+  def initialize args={}
+    super
+    self.number = args[:number] || 1
   end
 
   block 'IndexPage' do
@@ -18,7 +19,7 @@ class IndexPage < Page
     # start_index = (POSTS_PER_PAGE * page) - 1
     # end_index = [start_index + POSTS_PER_PAGE, data['posts'].length].min
     data['posts'].map do |post|
-      Post.for self, post
+      Post.for prototype: self, post: post
     end
   end
 

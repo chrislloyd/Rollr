@@ -30,8 +30,8 @@ class TemplateContext
   attr_accessor :prototype
   attr_writer   :data
 
-  def initialize data=nil
-    self.data = data
+  def initialize args={}
+    self.prototype, self.data = args[:prototype], args[:data]
   end
 
   def data

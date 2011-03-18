@@ -27,12 +27,11 @@ class WebView < Sinatra::Base
 
 
   before do
-    @root = Page.new data
+    @root = Page.new data: data
   end
 
   get '/' do
-    scope = IndexPage.new
-    scope.prototype = @root
+    scope = IndexPage.new prototype: @root
     tuml template, locals: {page: scope}
   end
 
