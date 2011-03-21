@@ -51,21 +51,25 @@ class Page < TemplateContext
     false
   end
 
+  class Following < TemplateContext
+    # The username of the blog you're following.
+    tag 'FollowedName'
+
+    # The title of the blog you're following.
+    tag 'FollowedTitle'
+
+    # The URL for the blog you're following.
+    tag 'FollowedURL'
+
+    # Portrait photo URL for the blog you're following.
+    PORTRAIT_SIZES.each do |n|
+      tag "FollowedPortraitURL-#{n}"
+    end
+  end
+
   # Rendered for each blog you're following.
-  block 'Followed'
-
-  # The username of the blog you're following.
-  tag 'FollowedName'
-
-  # The title of the blog you're following.
-  tag 'FollowedTitle'
-
-  # The URL for the blog you're following.
-  tag 'FollowedURL'
-
-  # Portrait photo URL for the blog you're following.
-  PORTRAIT_SIZES.each do |n|
-    tag "FollowedPortraitURL-#{n}"
+  block 'Followed' do
+    []
   end
 
 
@@ -74,41 +78,26 @@ class Page < TemplateContext
   # Rendered on additional public group blogs.
   block 'GroupMembers'
 
-  # Rendered for each additional public group blog member.
-  block 'GroupMember'
+  class GroupMember < TemplateContext
+    # The username of the member's blog.
+    tag 'GroupMemberName'
 
-  tag 'GroupMemberName'
-  # The username of the member's blog.
+    # The title of the member's blog.
+    tag 'GroupMemberTitle'
 
-  # The title of the member's blog.
-  tag 'GroupMemberTitle'
+    # The URL for the member's blog.
+    tag 'GroupMemberURL'
 
-  # The URL for the member's blog.
-  tag 'GroupMemberURL'
-
-  # Portrait photo URL for the member.
-  PORTRAIT_SIZES.each do |n|
-    tag "GroupMemberPortraitURL-#{n}"
+    # Portrait photo URL for the member.
+    PORTRAIT_SIZES.each do |n|
+      tag "GroupMemberPortraitURL-#{n}"
+    end
   end
 
-
-  ## Jump Pagination
-
-  # Rendered for each page greater than the current page minus one-half
-  # length up to current page plus one-half length.
-  block 'JumpPagination' #, :length => 5
-
-  # Rendered when jump page is the current page.
-  block 'CurrentPage'
-
-  # Rendered when jump page is not the current page.
-  block 'JumpPage'
-
-  # Page number for jump page.
-  tag 'PageNumer'
-
-  # URL for jump page.
-  tag 'URL'
+  # Rendered for each additional public group blog member.
+  block 'GroupMember' do
+    []
+  end
 
 
   ## Likes
@@ -134,13 +123,13 @@ class Page < TemplateContext
 
   # Rendered if there is a 'previous' page (newer posts) to navigate to.
   block 'PreviousPage' do
-    page > 1
+    page_number > 1
   end
 
   # Rendered if there is a 'next' page (older posts) to navigate to.
-  block 'NextPage' do
-    # page < (20 - 6)
-  end
+  block 'NextPage'
+  # page < (20 - 6)
+
 
   # URL for the 'previous' page (newer posts).
   tag 'PreviousPage'
@@ -156,29 +145,28 @@ class Page < TemplateContext
 
   # Rendered if Submissions are enabled.
   block 'SubmissionsEnabled' do
-    false
+    true
   end
 
   # The customizable label for the Submit link. (Example: 'Submit')
-  tag 'SubmitLabel'
+  tag 'SubmitLabel' do
+    'Submit'
+  end
 
   # Rendered if asking questions is enabled.
   block 'AskEnabled' do
-    false
+    true
   end
 
   # The customizable label for the Ask link. (Example: 'Ask me anything')
-  tag 'AskLabel'
+  tag 'AskLabel' do
+    'Ask me anything'
+  end
 
 
   ## Custom Pages
 
   class CustomPage < TemplateContext
-
-    def initialize prototype, data
-      super prototype, data
-    end
-
     # The URL for this page.
     tag 'URL' do
       data['url']
@@ -197,7 +185,7 @@ class Page < TemplateContext
 
   # Rendered for each custom page.
   block 'Pages' do
-    # data['pages'].map {|page| CustomPage.new self, page}
+    # data['pages'].map {|page| CustomPage.new prototype: self, data: page}
     []
   end
 
@@ -208,7 +196,9 @@ class Page < TemplateContext
   tag 'Twitter'
 
   # Your Twitter username.
-  tag 'TwitterUsername'
+  tag 'TwitterUsername' do
+    'rollrapp'
+  end
 
 
 private
@@ -230,7 +220,7 @@ private
   end
 
   def sanitize text, opts={}
-    Sanitize.clean text, {}.merge(opts)
+    Sanitize.clean text, opts
   end
 
   def absolute_url *path_segments

@@ -2,32 +2,10 @@ framework 'Cocoa'
 
 # Starts the app icon bouncing
 NSApplication.sharedApplication
+require 'boot'
 
-require 'json'
-
-require 'rubygems'
-require 'temple'
-require 'treetop'
-require 'sanitize'
-require 'sinatra/base'
-require 'control_tower'
-
-%w{
-
-  CoreExt
-
-  Tuml Parser ScopeFilter BlockFilter Generator Engine Template
-
-  TemplateContext
-  Post AnswerPost AudioPost ChatPost LinkPost PhotoPost QuotePost TextPost
-    VideoPost
-  Page AskPage CustomPage DayPage IndexPage PermalinkPage SearchPage
-    SubmitPage TagPage
-
-  AppController AppDelegate ArrowView DropView HTTPRequest MainWindow
-    OptionsView UserTemplate WebView
-
-}.each {|lib| require lib}
+(CORE_LIBS + TUML_LIBS + THUD_LIBS + APP_LIBS).
+  each {|lib| require lib}
 
 NSApp.delegate = AppDelegate.new
 

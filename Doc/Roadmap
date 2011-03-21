@@ -1,0 +1,37 @@
+# Roadmap
+
+
+## Release 1.0.0 "Stone"
+
+1. Menu bar and keyboard shortcuts
+     Possible reason for rejection from the app store
+     Breaks the user interface
+
+
+## Release 1.1.0 "Iron"
+
+1. Ragel parser
+     Parse perf. on large templates can blow out to ~5s
+     Treetop is an extra dependency
+2. Help menubar
+3. Better App Store description/screenshots
+
+
+## Release 1.2.0 "Coal"
+
+1. Complete data mocking
+2. Custom pages
+3. Variable transformations
+
+
+## Release 2.0.0 "Diamond"
+
+1. Parse custom variables
+     Pass in runtime options (colors etc.)
+2. Parse i18n
+3. Design
+     Custom widgets/Animations
+4. Icon
+5. Website
+6. Textmate Bundle
+7. Remember last template

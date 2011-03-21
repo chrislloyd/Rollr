@@ -13,15 +13,11 @@ class TemplateContext
     end
 
     def tag name, defaults={}, &code
-      self.tags[name.downcase] = code || lambda do
-        raise NotImplemented, "{#{name}}"
-      end
+      self.tags[name.downcase] = code
     end
 
     def block name, defaults={}, &code
-      self.blocks[name.downcase] = code || lambda do
-        raise NotImplemented, "{block:#{name}}"
-      end
+      self.blocks[name.downcase] = code
     end
 
   end

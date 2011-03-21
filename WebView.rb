@@ -6,7 +6,6 @@ class WebView < Sinatra::Base
   end
 
   helpers do
-
     def tuml *args
       render :tuml, *args
     end
@@ -22,7 +21,6 @@ class WebView < Sinatra::Base
     def asset name
       File.join NSBundle.mainBundle.resourcePath.fileSystemRepresentation, name
     end
-
   end
 
 
@@ -36,7 +34,8 @@ class WebView < Sinatra::Base
   end
 
   get '/page/:n' do |n|
-    tuml IndexPage.new(@root, n)
+    scope = IndexPage.new prototype: @root, number: n
+    tuml template, locals: {page: scope}
   end
 
   get '/post/:id' do |id|

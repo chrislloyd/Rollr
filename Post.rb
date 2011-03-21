@@ -30,7 +30,7 @@ class Post < TemplateContext
   end
 
   def collection
-    data['posts']
+    raw['posts']
   end
 
   ## Basic Variables
@@ -38,7 +38,7 @@ class Post < TemplateContext
   # The permalink for a post.
   tag 'Permalink' do
     # TODO local_url
-    post['url']
+    raw['url']
   end
 
   # A shorter URL that redirects to this post. For example:
@@ -49,32 +49,27 @@ class Post < TemplateContext
 
   # The numeric ID for a post.
   tag 'PostID' do
-    post['id']
+    raw['id']
   end
-
-  # An HTML class-attribute friendly list of the post's tags. (Example:
-  # "humor office new_york_city") By default, an HTML friendly version of
-  # the source domain of imported posts will be included. (Example:
-  # "twitter_com", "digg_com", etc.) This may not behave as expected with
-  # feeds like Del.icio.us that send their content URLs as their permalinks.
-  # The class-attribute "reblog" will be included automatically if the post
-  # was reblogged from another post.
-  tag 'TagsAsClasses'
 
   # Only rendered for the post at the specified offset. This makes it
   # possible to insert an advertisement or design element in the middle of
   # your posts.
   (1..15).each do |n|
     block "Post#{n}" do
-      posts['posts'].index(data) == n
+      index == n
     end
   end
 
   # Rendered for every one of the current pages odd-numbered posts.
-  block 'Odd'
+  block 'Odd' do
+    1 == index % 2
+  end
 
   # Rendered for every one of the current pages even-numbered posts.
-  block 'Even'
+  block 'Even' do
+    0 == index % 2
+  end
 
   # Rendered on index pages for posts with Read More breaks.
   block 'More'
@@ -90,16 +85,16 @@ class Post < TemplateContext
     true
   end
 
-  # TODO Yeah, I know this is wrong...
   # Rendered for posts that are the first to be listed for a given day.
   block 'NewDayDate' do
-    true
+    collection.last == data or
+    (prev = block('Posts')[index + 1].time and
+      prev.yday != prev.yday and prev.year != prev.year)
   end
 
-  # TODO Yeah, I know this is wrong...
   # Rendered for subsequent posts listed for a given day.
   block 'SameDayDate' do
-    true
+    not tag('NewDayDate')
   end
 
   # The day of the month. Returns '1' to '31'.
@@ -128,8 +123,20 @@ class Post < TemplateContext
   end
 
   # The day of the month suffix. Returns 'st', 'nd', 'rd', 'th'.
+  #
+  # Stolen from the ActiveSupport::Inflector
+  # lib/active_support/inflector.rb#295
   tag 'DayOfMonthSuffix' do
-    ordinal(time.day)
+    if (11..13).include?(time.day % 100)
+      'th'
+    else
+      case time.day % 10
+        when 1; 'st'
+        when 2; 'nd'
+        when 3; 'rd'
+        else    'th'
+      end
+    end
   end
 
   # The day of the year. Returns '1' through '365'.
@@ -224,25 +231,42 @@ class Post < TemplateContext
   end
 
   # A human-readable contextual time. Returns '1 minute ago', '2 hours ago', '3 weeks ago', etc.
-  tag 'TimeAgo'
+  tag 'TimeAgo' do
+    '1 minute ago'
+  end
 
 
   ## Permalink Pagination
 
   # Rendered if there is a 'previous' or 'next' post.
-  block 'PermalinkPagination'
+  block 'PermalinkPagination' do
+    block('Pages').length > 1
+  end
+
+  class PreviousPost < TemplateContext
+    # URL for the 'previous' (newer) post.
+    tag 'PreviousPost' do
+      block('Pages')[prototype.index - 1].tag('Permalink')
+    end
+  end
 
   # Rendered if there is a 'previous' post to navigate to.
-  block 'PreviousPost'
+  block 'PreviousPost' do
+    block('Pages').first != self and PreviousPost.new(prototype: self)
+  end
+
+  class NextPost < TemplateContext
+    # TODO Make this more robust
+    # URL for the 'next' (older) post.
+    tag 'NextPost' do
+      block('Pages')[prototype.index + 1].tag('Permalink')
+    end
+  end
 
   # Rendered if there is a 'next' post to navigate to.
-  block 'NextPost'
-
-  # URL for the 'previous' (newer) post.
-  tag 'PreviousPost'
-
-  # URL for the 'next' (older) post.
-  tag 'NextPost'
+  block 'NextPost' do
+    block('Pages').last != self and NextPost.new(prototype: self)
+  end
 
 
   ## Reblogs
@@ -286,20 +310,20 @@ class Post < TemplateContext
 
   # Rendered inside {block:Posts} if post has tags.
   block 'HasTags' do
-    not call('Tags').empty?
+    not block('Tags').empty?
   end
 
   # Rendered for each of a post's tags.
   block 'Tags' do
-    data['tags'].map {|name| Tag.new(self, name)}
+    post['tags'].map {|name| Tag.new(prototype: self, name: name)}
   end
 
   class Tag < TemplateContext
-
     attr_accessor :name
 
-    def initialize parent, name
-      self.parent, self.name = parent, name
+    def initialize args={}
+      super
+      self.name = args[:name]
     end
 
     # The name of this tag.
@@ -311,7 +335,9 @@ class Post < TemplateContext
     tag 'URLSafeTag'
 
     # The tag page URL with other posts that share this tag.
-    tag 'TagURL'
+    tag 'TagURL' do
+      "/tag/" + tag('URLSafeTag')
+    end
 
     # The tag page URL with other posts that share this tag in chronological
     # order.
@@ -319,26 +345,24 @@ class Post < TemplateContext
 
   end
 
+  # An HTML class-attribute friendly list of the post's tags. (Example:
+  # "humor office new_york_city") By default, an HTML friendly version of
+  # the source domain of imported posts will be included. (Example:
+  # "twitter_com", "digg_com", etc.) This may not behave as expected with
+  # feeds like Del.icio.us that send their content URLs as their permalinks.
+  # The class-attribute "reblog" will be included automatically if the post
+  # was reblogged from another post.
+  tag 'TagsAsClasses'
 
-private
+
+# private
+
+  def index
+    collection.index data
+  end
 
   def time
     @time ||= Time.at post['unix-timestamp']
-  end
-
-  # Stolen from the ActiveSupport::Inflector
-  # lib/active_support/inflector.rb#295
-  def ordinal number
-    if (11..13).include?(number.to_i % 100)
-      'th'
-    else
-      case number.to_i % 10
-        when 1; 'st'
-        when 2; 'nd'
-        when 3; 'rd'
-        else    'th'
-      end
-    end
   end
 
 end
