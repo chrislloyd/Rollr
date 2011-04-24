@@ -2,8 +2,8 @@ require 'json'
 
 require 'rubygems'
 require 'temple'
-require 'treetop'
 require 'sanitize'
+require 'rack'
 require 'sinatra/base'
 require 'control_tower'
 

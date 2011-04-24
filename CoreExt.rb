@@ -11,6 +11,7 @@ class NSObject
   # Usage:
   #   bind :stop_server, from: obj, named: 'Yo'
   def bind method, opts
+    raise ArgumentError unless opts[:named] || opts[:from]
     NSNotificationCenter.defaultCenter.addObserver self,
       selector: method.to_selector,
       name: opts[:named],
@@ -46,20 +47,24 @@ class NSResponder
 
 end
 
-# TODO LONGTERM Contribute methods back to ControlTower.
+# TODO Contribute methods back to ControlTower.
 #   Really, the only use case for ControlTower is embedded inside applications
 #   so it makes sense for it to have great start/stop/querying.
 class ControlTower::RackSocket
+
   def open?
     @status == :open
   end
+
 end
 
 # BUG Macruby
 class Temple::Filter
+
   def self.default_options
     {}
   end
+
 end
 
 class NSURL

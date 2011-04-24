@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+
+    <title>
+      {Title}{block:PostSummary} - {PostSummary}{/block:PostSummary}
+    </title>
+
+    {block:Description}
+      <meta name='description' content='{MetaDescription}'>
+    {/block:Description}
+
+    <link rel='icon' href='{Favicon}' />
+    <style type='text/css'>
+      html, body, div, span, applet, object, iframe,
+      h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+      a, abbr, acronym, address, big, cite, code,
+      del, dfn, em, img, ins, kbd, q, s, samp,
+      small, strike, strong, sub, sup, tt, var,
+      b, u, i, center,
+      dl, dt, dd, ol, ul, li,
+      fieldset, form, label, legend,
+      table, caption, tbody, tfoot, thead, tr, th, td,
+      article, aside, canvas, details, embed,
+      figure, figcaption, footer, header, hgroup,
+      menu, nav, output, ruby, section, summary,
+      time, mark, audio, video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+      }
+      /* HTML5 display-role reset for older browsers */
+      article, aside, details, figcaption, figure,
+      footer, header, hgroup, menu, nav, section {
+        display: block;
+      }
+      body {
+        line-height: 1;
+      }
+      ol, ul {
+        list-style: none;
+      }
+      blockquote, q {
+        quotes: none;
+      }
+      blockquote:before, blockquote:after,
+      q:before, q:after {
+        content: '';
+        content: none;
+      }
+      table {
+        border-collapse: collapse;
+        border-spacing: 0;
+      }
+    </style>
+    <style type='text/css'>
+      body {
+        width: 500px;
+        margin: 0 auto;
+        padding-left: 120px;
+        font: 10px/2em Georgia, sans-serif;
+        color: #333;
+      }
+      header, aside {
+        margin-left: -120px;
+        float: left;
+      }
+      header {
+        margin-top: 54px;
+        padding-top: 18px;
+        margin-bottom: 54px; /* 72 - 18 */
+        padding-bottom: 18px;
+        height: 24px;
+        width: 100%;
+      }
+      header h1 {
+        background: url('{PortraitURL-64}') top left no-repeat;
+        width: 64px;
+        height: 64px;
+        float: left;
+        margin: -20px 0;
+        margin-right: 36px;
+        text-indent: -9999px;
+        overflow: hidden;
+      }
+      header nav ol {
+        margin-left: -20px;
+      }
+      header nav li, header nav form {
+        float: left;
+        margin-left: 20px;
+      }
+      header nav li a {
+        display: block;
+        line-height: 22px;
+        font: 12px/24px Helvetica, Arial, sans-serif;
+        padding: 0 9px;
+
+        color: #999;
+        border-radius: 4px;
+        text-decoration: none;
+        border: 1px solid #EEE;
+      }
+      header nav li a:hover {
+        border-color: #CCC;
+      }
+      header nav li a:active {
+        color: #F30;
+/*        border-color: #EEE;*/
+      }
+      header nav form input {
+        margin: 0;
+        font: 12px/14px Helvetica, Arial, sans-serif;
+        padding: 5px 9px;
+        color: #999;
+        border-radius: 4px;
+        text-decoration: none;
+        border: 1px solid #EEE;
+        outline: none;
+      }
+      header nav form input:-webkit-input-placeholder {
+        color: #CCC;
+      }
+      header nav form input:focus {
+        border-color: #CCC;
+      }
+      #posts {
+        margin-bottom: 144px;
+      }
+      .post {
+        font-size: 15px;
+        line-height: 24px;
+        margin-bottom: 72px;
+        clear: both;
+      }
+      .post article p {
+        margin-bottom: 24px;
+      }
+      .post article em {
+        font-style: italic;
+      }
+      .post article strong {
+        font-weight: bold;
+      }
+      .post ol {
+        list-style-type: decimal;
+      }
+      .post ul {
+        list-style-type: circle;
+      }
+      .post article a {
+        color: #000;
+        text-decoration: none;
+        border-bottom: 1px solid #EEE;
+        font-style: italic;
+        text-transform: uppercase;
+        font-size: 12px;
+        line-height: 24px;
+      }
+      .post article a:hover {
+        border-color: #CCC;
+      }
+      .post article a:active {
+        color: #F30;
+      }
+      .post .dash {
+        width: 20px;
+        margin-left: -20px;
+        display: block;
+        float: left;
+      }
+      .post cite {
+        line-height: 24px;
+        font-size: 12px;
+        font-style: italic;
+        display: block;
+        color: #CCC;
+        margin-top: 12px;
+        margin-left: 20px;
+      }
+      .post aside {
+        width: 100px;
+        font: 12px/24px Helvetica, Arial, sans-serif;
+        color: #CCC;
+      }
+      .post aside a {
+        text-decoration: none;
+      }
+      .post aside a date {
+        color: #CCC;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+
+  <body class='{block:IndexPage}index{/block:IndexPage}{block:PermalinkPage}permalink{/block:PermalinkPage}'>
+    <header>
+      <a href='/'>
+        <h1>Chris Lloyd</h1>
+      </a>
+      <nav>
+        <ol>
+          {block:HasPages}
+            {block:Pages}
+              <li><a href='{URL}'>{Label}</a></li>
+            {/block:Pages}
+          {/block:HasPages}
+          <li><a href='/archive'>Archive</a></li>
+        </ol>
+        <form action='/search' method='get'>
+            <input type='text' name='q' placeholder='Search' />
+        </form>
+      </nav>
+    </header>
+
+    <div id='posts'>
+      {block:Posts}
+        <div class='post'>
+          <aside>
+            <a href='{Permalink}'>
+              {block:Date}
+                <date>
+                  {DayOfMonth}<sup>{DayOfMonthSuffix}</sup> {ShortMonth}, {Year}
+                </date>
+              {/block:Date}
+            </a>
+          </aside>
+
+          {block:Text}
+            {block:Title}
+              <h2>{Title}</h2>
+            {/block:Title}
+
+            <article>{Body}</article>
+          {/block:Text}
+
+          {block:Photo}
+            {LinkOpenTag}<img src='{PhotoURL-500}'>{LinkCloseTag}
+
+            {block:Caption}
+              <article>{Caption}</article>
+            {/block:Caption}
+          {/block:Photo}
+
+          {block:Video}
+            {Video-500}
+
+            {block:Caption}
+              <article>{Caption}</article>
+            {/block:Caption}
+          {/block:Video}
+
+          {block:Quote}
+            <article>
+              &ldquo;{Quote}&rdquo;
+              {block:Source}
+                <cite><span class='dash'>&mdash;</span> {Source}</cite>
+              {/block:Source}
+            </article>
+          {/block:Quote}
+
+          {block:Link}
+            <article>
+              <a href='{URL}'>{Name}</a>
+              {block:Description}
+                {Description}
+              {/block:Description}
+            </article>
+          {/block:Link}
+
+        </div>
+      {block:Posts}
+    </div>
+    <footer>
+      {block:Pagination}
+        {block:PreviousPage}
+          <a href="{PreviousPage}">Newer</a>
+        {/block:PreviousPage}
+
+        {block:NextPage}
+          <a href="{NextPage}">Older</a>
+        {/block:NextPage}
+      {/block:Pagination}
+
+      {block:PermalinkPagination}
+        {block:PreviousPost}
+          <a href="{PreviousPost}">Older</a>
+        {/block:PreviousPost}
+
+        {block:NextPost}
+          <a href="{NextPost}">Newer</a>
+        {/block:NextPost}
+      {/block:PermalinkPagination}
+    </footer>
+  </body>
+</html>

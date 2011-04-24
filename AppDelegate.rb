@@ -9,14 +9,4 @@ class AppDelegate
     app_controller.stop_server!
   end
 
-  # def application application, openFile:file
-  #   puts application
-  #   puts file
-  # end
-
-  # def method_missing meth, *args, &blk
-  #   puts meth
-  #   super
-  # end
-
 end

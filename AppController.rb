@@ -14,6 +14,15 @@ class AppController
     window.contentView.addSubview options_view
     window.contentView.addSubview spinner
     window.contentView.addSubview preview_button
+    
+    NSApp.mainMenu = NSMenu.alloc.initWithTitle ''
+    
+    NSApp.mainMenu.addItemWithTitle 'Foobar', action: :foo.to_selector, keyEquivalent: ''
+    
+    NSApp.helpMenu
+    
+    puts 'awse'
+    
 
     bind :changeTemplatePath, from: drop_view, named: 'Changed'
     bind :changeTemplateSite, from: options_view.site_field, named: 'Changed'

@@ -7,53 +7,63 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		830605DF1329A4630076F243 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 830605DE1329A4630076F243 /* Cocoa.framework */; };
-		830605EC1329A4630076F243 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 830605EB1329A4630076F243 /* main.m */; };
-		830606001329A5060076F243 /* main.rb in Resources */ = {isa = PBXBuildFile; fileRef = 830605FF1329A5060076F243 /* main.rb */; };
-		830606041329A52C0076F243 /* Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 830606031329A52C0076F243 /* Icon.icns */; };
-		830606061329A5670076F243 /* MacRuby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 830606051329A5670076F243 /* MacRuby.framework */; };
-		8319A2AD132B7F33000531C3 /* SubmitPage.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8319A2A5132B7F33000531C3 /* SubmitPage.rb */; };
-		8319A2AE132B7F33000531C3 /* TagPage.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8319A2A6132B7F33000531C3 /* TagPage.rb */; };
-		8319A2AF132B7F33000531C3 /* Template.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8319A2A7132B7F33000531C3 /* Template.rb */; };
-		8319A2B0132B7F33000531C3 /* TemplateContext.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8319A2A8132B7F33000531C3 /* TemplateContext.rb */; };
-		8319A2B1132B7F33000531C3 /* TextPost.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8319A2A9132B7F33000531C3 /* TextPost.rb */; };
-		8319A2B2132B7F33000531C3 /* UserTemplate.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8319A2AA132B7F33000531C3 /* UserTemplate.rb */; };
-		8319A2B3132B7F33000531C3 /* VideoPost.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8319A2AB132B7F33000531C3 /* VideoPost.rb */; };
-		8319A2B4132B7F33000531C3 /* WebView.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8319A2AC132B7F33000531C3 /* WebView.rb */; };
-		8319A2C5132B7F4A000531C3 /* ArrowView.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8319A2B5132B7F4A000531C3 /* ArrowView.rb */; };
-		8319A2C6132B7F4A000531C3 /* DropView.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8319A2B6132B7F4A000531C3 /* DropView.rb */; };
-		8319A2C7132B7F4A000531C3 /* Engine.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8319A2B7132B7F4A000531C3 /* Engine.rb */; };
-		8319A2C8132B7F4A000531C3 /* Generator.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8319A2B8132B7F4A000531C3 /* Generator.rb */; };
-		8319A2C9132B7F4A000531C3 /* helpers.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8319A2B9132B7F4A000531C3 /* helpers.rb */; };
-		8319A2CA132B7F4A000531C3 /* IndexPage.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8319A2BA132B7F4A000531C3 /* IndexPage.rb */; };
-		8319A2CB132B7F4A000531C3 /* LinkPost.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8319A2BB132B7F4A000531C3 /* LinkPost.rb */; };
-		8319A2CC132B7F4A000531C3 /* MainWindow.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8319A2BC132B7F4A000531C3 /* MainWindow.rb */; };
-		8319A2CD132B7F4A000531C3 /* Page.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8319A2BD132B7F4A000531C3 /* Page.rb */; };
-		8319A2CE132B7F4A000531C3 /* Parser.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8319A2BE132B7F4A000531C3 /* Parser.rb */; };
-		8319A2CF132B7F4A000531C3 /* PermalinkPage.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8319A2BF132B7F4A000531C3 /* PermalinkPage.rb */; };
-		8319A2D0132B7F4A000531C3 /* PhotoPost.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8319A2C0132B7F4A000531C3 /* PhotoPost.rb */; };
-		8319A2D1132B7F4A000531C3 /* Post.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8319A2C1132B7F4A000531C3 /* Post.rb */; };
-		8319A2D2132B7F4A000531C3 /* QuotePost.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8319A2C2132B7F4A000531C3 /* QuotePost.rb */; };
-		8319A2D3132B7F4A000531C3 /* ScopeFilter.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8319A2C3132B7F4A000531C3 /* ScopeFilter.rb */; };
-		8319A2D4132B7F4A000531C3 /* SearchPage.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8319A2C4132B7F4A000531C3 /* SearchPage.rb */; };
-		8319A2DF132B7F51000531C3 /* AnswerPost.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8319A2D5132B7F51000531C3 /* AnswerPost.rb */; };
-		8319A2E0132B7F51000531C3 /* AppController.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8319A2D6132B7F51000531C3 /* AppController.rb */; };
-		8319A2E1132B7F51000531C3 /* AppDelegate.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8319A2D7132B7F51000531C3 /* AppDelegate.rb */; };
-		8319A2E2132B7F51000531C3 /* AskPage.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8319A2D8132B7F51000531C3 /* AskPage.rb */; };
-		8319A2E3132B7F51000531C3 /* AudioPost.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8319A2D9132B7F51000531C3 /* AudioPost.rb */; };
-		8319A2E4132B7F51000531C3 /* BlockFilter.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8319A2DA132B7F51000531C3 /* BlockFilter.rb */; };
-		8319A2E5132B7F51000531C3 /* ChatPost.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8319A2DB132B7F51000531C3 /* ChatPost.rb */; };
-		8319A2E6132B7F51000531C3 /* CoreExt.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8319A2DC132B7F51000531C3 /* CoreExt.rb */; };
-		8319A2E7132B7F51000531C3 /* CustomPage.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8319A2DD132B7F51000531C3 /* CustomPage.rb */; };
-		8319A2E8132B7F51000531C3 /* DayPage.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8319A2DE132B7F51000531C3 /* DayPage.rb */; };
-		8366831F1332C563007ED4B9 /* HTTPRequest.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8366831E1332C563007ED4B9 /* HTTPRequest.rb */; };
-		83668321133337BF007ED4B9 /* Tuml.rb in Resources */ = {isa = PBXBuildFile; fileRef = 83668320133337BF007ED4B9 /* Tuml.rb */; };
-		83668325133341ED007ED4B9 /* boot.rb in Resources */ = {isa = PBXBuildFile; fileRef = 83668324133341ED007ED4B9 /* boot.rb */; };
-		837EA736132E30160001DA76 /* OptionsView.rb in Resources */ = {isa = PBXBuildFile; fileRef = 837EA735132E30160001DA76 /* OptionsView.rb */; };
+		835C5D9B133C285600A6CF12 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 830605DE1329A4630076F243 /* Cocoa.framework */; };
+		835C5D9C133C285600A6CF12 /* MacRuby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 830606051329A5670076F243 /* MacRuby.framework */; };
+		835C5DB6133C289A00A6CF12 /* Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 830606031329A52C0076F243 /* Icon.icns */; };
+		83A5285B133C3B6900DA8D9A /* HTTPRequest.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8366831E1332C563007ED4B9 /* HTTPRequest.rb */; };
+		83A5285C133C3B6900DA8D9A /* AppController.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8319A2D6132B7F51000531C3 /* AppController.rb */; };
+		83A5285D133C3B6900DA8D9A /* AppDelegate.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8319A2D7132B7F51000531C3 /* AppDelegate.rb */; };
+		83A5285E133C3B6900DA8D9A /* CoreExt.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8319A2DC132B7F51000531C3 /* CoreExt.rb */; };
+		83A5285F133C3B6900DA8D9A /* UserTemplate.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8319A2AA132B7F33000531C3 /* UserTemplate.rb */; };
+		83A52860133C3B6900DA8D9A /* WebView.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8319A2AC132B7F33000531C3 /* WebView.rb */; };
+		83A52861133C3B6900DA8D9A /* ArrowView.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8319A2B5132B7F4A000531C3 /* ArrowView.rb */; };
+		83A52862133C3B6900DA8D9A /* DropView.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8319A2B6132B7F4A000531C3 /* DropView.rb */; };
+		83A52863133C3B6900DA8D9A /* MainWindow.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8319A2BC132B7F4A000531C3 /* MainWindow.rb */; };
+		83A52864133C3B6D00DA8D9A /* boot.rb in Resources */ = {isa = PBXBuildFile; fileRef = 83668324133341ED007ED4B9 /* boot.rb */; };
+		83A52865133C3B7600DA8D9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 830605EB1329A4630076F243 /* main.m */; };
+		83A52866133C3B7600DA8D9A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 830606011329A5240076F243 /* Info.plist */; };
+		83A52867133C3B7600DA8D9A /* main.rb in Resources */ = {isa = PBXBuildFile; fileRef = 830605FF1329A5060076F243 /* main.rb */; };
+		83A52868133C3B7900DA8D9A /* OptionsView.rb in Resources */ = {isa = PBXBuildFile; fileRef = 837EA735132E30160001DA76 /* OptionsView.rb */; };
+		83A5286A133C3B7E00DA8D9A /* Tuml.rb in Resources */ = {isa = PBXBuildFile; fileRef = 83668320133337BF007ED4B9 /* Tuml.rb */; };
+		83A5286B133C3B7E00DA8D9A /* Template.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8319A2A7132B7F33000531C3 /* Template.rb */; };
+		83A5286C133C3B7E00DA8D9A /* BlockFilter.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8319A2DA132B7F51000531C3 /* BlockFilter.rb */; };
+		83A5286D133C3B7E00DA8D9A /* Generator.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8319A2B8132B7F4A000531C3 /* Generator.rb */; };
+		83A5286E133C3B7E00DA8D9A /* Engine.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8319A2B7132B7F4A000531C3 /* Engine.rb */; };
+		83A5286F133C3B7E00DA8D9A /* helpers.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8319A2B9132B7F4A000531C3 /* helpers.rb */; };
+		83A52870133C3B7E00DA8D9A /* Parser.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8319A2BE132B7F4A000531C3 /* Parser.rb */; };
+		83A52871133C3B7E00DA8D9A /* ScopeFilter.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8319A2C3132B7F4A000531C3 /* ScopeFilter.rb */; };
+		83A52872133C3B8700DA8D9A /* SubmitPage.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8319A2A5132B7F33000531C3 /* SubmitPage.rb */; };
+		83A52873133C3B8700DA8D9A /* TagPage.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8319A2A6132B7F33000531C3 /* TagPage.rb */; };
+		83A52874133C3B8700DA8D9A /* TemplateContext.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8319A2A8132B7F33000531C3 /* TemplateContext.rb */; };
+		83A52875133C3B8700DA8D9A /* TextPost.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8319A2A9132B7F33000531C3 /* TextPost.rb */; };
+		83A52876133C3B8700DA8D9A /* AnswerPost.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8319A2D5132B7F51000531C3 /* AnswerPost.rb */; };
+		83A52877133C3B8700DA8D9A /* AskPage.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8319A2D8132B7F51000531C3 /* AskPage.rb */; };
+		83A52878133C3B8700DA8D9A /* AudioPost.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8319A2D9132B7F51000531C3 /* AudioPost.rb */; };
+		83A52879133C3B8700DA8D9A /* ChatPost.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8319A2DB132B7F51000531C3 /* ChatPost.rb */; };
+		83A5287A133C3B8700DA8D9A /* CustomPage.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8319A2DD132B7F51000531C3 /* CustomPage.rb */; };
+		83A5287B133C3B8700DA8D9A /* DayPage.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8319A2DE132B7F51000531C3 /* DayPage.rb */; };
+		83A5287C133C3B8700DA8D9A /* VideoPost.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8319A2AB132B7F33000531C3 /* VideoPost.rb */; };
+		83A5287D133C3B8700DA8D9A /* IndexPage.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8319A2BA132B7F4A000531C3 /* IndexPage.rb */; };
+		83A5287E133C3B8700DA8D9A /* LinkPost.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8319A2BB132B7F4A000531C3 /* LinkPost.rb */; };
+		83A5287F133C3B8700DA8D9A /* Page.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8319A2BD132B7F4A000531C3 /* Page.rb */; };
+		83A52880133C3B8700DA8D9A /* PermalinkPage.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8319A2BF132B7F4A000531C3 /* PermalinkPage.rb */; };
+		83A52881133C3B8700DA8D9A /* PhotoPost.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8319A2C0132B7F4A000531C3 /* PhotoPost.rb */; };
+		83A52882133C3B8700DA8D9A /* Post.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8319A2C1132B7F4A000531C3 /* Post.rb */; };
+		83A52883133C3B8700DA8D9A /* QuotePost.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8319A2C2132B7F4A000531C3 /* QuotePost.rb */; };
+		83A52884133C3B8700DA8D9A /* SearchPage.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8319A2C4132B7F4A000531C3 /* SearchPage.rb */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		837A7A1F13528DB50042939B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 830605CF1329A4200076F243 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 835C5D98133C285600A6CF12;
+			remoteInfo = Rollr;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		830605DA1329A4630076F243 /* Rollr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rollr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		830605DE1329A4630076F243 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		830605E11329A4630076F243 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		830605E31329A4630076F243 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -97,6 +107,7 @@
 		8319A2DC132B7F51000531C3 /* CoreExt.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = CoreExt.rb; sourceTree = "<group>"; };
 		8319A2DD132B7F51000531C3 /* CustomPage.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = CustomPage.rb; path = ./CustomPage.rb; sourceTree = "<group>"; };
 		8319A2DE132B7F51000531C3 /* DayPage.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = DayPage.rb; path = ./DayPage.rb; sourceTree = "<group>"; };
+		835C5D99133C285600A6CF12 /* Rollr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rollr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8366831E1332C563007ED4B9 /* HTTPRequest.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = HTTPRequest.rb; sourceTree = "<group>"; };
 		83668320133337BF007ED4B9 /* Tuml.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = Tuml.rb; path = ./Tuml.rb; sourceTree = "<group>"; };
 		83668322133337D0007ED4B9 /* Tuml.tt */ = {isa = PBXFileReference; lastKnownFileType = text; name = Tuml.tt; path = ./Tuml.tt; sourceTree = "<group>"; };
@@ -105,12 +116,12 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		830605D71329A4630076F243 /* Frameworks */ = {
+		835C5D96133C285600A6CF12 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				830606061329A5670076F243 /* MacRuby.framework in Frameworks */,
-				830605DF1329A4630076F243 /* Cocoa.framework in Frameworks */,
+				835C5D9B133C285600A6CF12 /* Cocoa.framework in Frameworks */,
+				835C5D9C133C285600A6CF12 /* MacRuby.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,7 +142,7 @@
 		830605DB1329A4630076F243 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				830605DA1329A4630076F243 /* Rollr.app */,
+				835C5D99133C285600A6CF12 /* Rollr.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -212,8 +223,8 @@
 				83668320133337BF007ED4B9 /* Tuml.rb */,
 				8319A2A7132B7F33000531C3 /* Template.rb */,
 				8319A2DA132B7F51000531C3 /* BlockFilter.rb */,
-				8319A2B7132B7F4A000531C3 /* Engine.rb */,
 				8319A2B8132B7F4A000531C3 /* Generator.rb */,
+				8319A2B7132B7F4A000531C3 /* Engine.rb */,
 				8319A2B9132B7F4A000531C3 /* helpers.rb */,
 				8319A2BE132B7F4A000531C3 /* Parser.rb */,
 				8319A2C3132B7F4A000531C3 /* ScopeFilter.rb */,
@@ -223,15 +234,32 @@
 		};
 /* End PBXGroup section */
 
-/* Begin PBXNativeTarget section */
-		830605D91329A4630076F243 /* Rollr */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 830605F61329A4640076F243 /* Build configuration list for PBXNativeTarget "Rollr" */;
+/* Begin PBXLegacyTarget section */
+		835C5D9D133C285600A6CF12 /* Deployment */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "--compile --embed";
+			buildConfigurationList = 835C5DB3133C285600A6CF12 /* Build configuration list for PBXLegacyTarget "Deployment" */;
 			buildPhases = (
-				830605D61329A4630076F243 /* Sources */,
-				830605D71329A4630076F243 /* Frameworks */,
-				830605D81329A4630076F243 /* Resources */,
-				8380564F1336D6250091CAD6 /* Embed MacRuby */,
+			);
+			buildToolPath = /usr/local/bin/macruby_deploy;
+			dependencies = (
+				837A7A2013528DB50042939B /* PBXTargetDependency */,
+			);
+			name = Deployment;
+			passBuildSettingsInEnvironment = 1;
+			productName = Deployment;
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXNativeTarget section */
+		835C5D98133C285600A6CF12 /* Rollr */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 835C5DB0133C285600A6CF12 /* Build configuration list for PBXNativeTarget "Rollr" */;
+			buildPhases = (
+				835C5D95133C285600A6CF12 /* Sources */,
+				835C5D96133C285600A6CF12 /* Frameworks */,
+				835C5D97133C285600A6CF12 /* Resources */,
+				8349687D13533FE40099B050 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -239,7 +267,7 @@
 			);
 			name = Rollr;
 			productName = Rollr;
-			productReference = 830605DA1329A4630076F243 /* Rollr.app */;
+			productReference = 835C5D99133C285600A6CF12 /* Rollr.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -262,88 +290,97 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				830605D91329A4630076F243 /* Rollr */,
+				835C5D98133C285600A6CF12 /* Rollr */,
+				835C5D9D133C285600A6CF12 /* Deployment */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		830605D81329A4630076F243 /* Resources */ = {
+		835C5D97133C285600A6CF12 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				830606001329A5060076F243 /* main.rb in Resources */,
-				830606041329A52C0076F243 /* Icon.icns in Resources */,
-				8319A2AD132B7F33000531C3 /* SubmitPage.rb in Resources */,
-				8319A2AE132B7F33000531C3 /* TagPage.rb in Resources */,
-				8319A2AF132B7F33000531C3 /* Template.rb in Resources */,
-				8319A2B0132B7F33000531C3 /* TemplateContext.rb in Resources */,
-				8319A2B1132B7F33000531C3 /* TextPost.rb in Resources */,
-				8319A2B2132B7F33000531C3 /* UserTemplate.rb in Resources */,
-				8319A2B3132B7F33000531C3 /* VideoPost.rb in Resources */,
-				8319A2B4132B7F33000531C3 /* WebView.rb in Resources */,
-				8319A2C5132B7F4A000531C3 /* ArrowView.rb in Resources */,
-				8319A2C6132B7F4A000531C3 /* DropView.rb in Resources */,
-				8319A2C7132B7F4A000531C3 /* Engine.rb in Resources */,
-				8319A2C8132B7F4A000531C3 /* Generator.rb in Resources */,
-				8319A2C9132B7F4A000531C3 /* helpers.rb in Resources */,
-				8319A2CA132B7F4A000531C3 /* IndexPage.rb in Resources */,
-				8319A2CB132B7F4A000531C3 /* LinkPost.rb in Resources */,
-				8319A2CC132B7F4A000531C3 /* MainWindow.rb in Resources */,
-				8319A2CD132B7F4A000531C3 /* Page.rb in Resources */,
-				8319A2CE132B7F4A000531C3 /* Parser.rb in Resources */,
-				8319A2CF132B7F4A000531C3 /* PermalinkPage.rb in Resources */,
-				8319A2D0132B7F4A000531C3 /* PhotoPost.rb in Resources */,
-				8319A2D1132B7F4A000531C3 /* Post.rb in Resources */,
-				8319A2D2132B7F4A000531C3 /* QuotePost.rb in Resources */,
-				8319A2D3132B7F4A000531C3 /* ScopeFilter.rb in Resources */,
-				8319A2D4132B7F4A000531C3 /* SearchPage.rb in Resources */,
-				8319A2DF132B7F51000531C3 /* AnswerPost.rb in Resources */,
-				8319A2E0132B7F51000531C3 /* AppController.rb in Resources */,
-				8319A2E1132B7F51000531C3 /* AppDelegate.rb in Resources */,
-				8319A2E2132B7F51000531C3 /* AskPage.rb in Resources */,
-				8319A2E3132B7F51000531C3 /* AudioPost.rb in Resources */,
-				8319A2E4132B7F51000531C3 /* BlockFilter.rb in Resources */,
-				8319A2E5132B7F51000531C3 /* ChatPost.rb in Resources */,
-				8319A2E6132B7F51000531C3 /* CoreExt.rb in Resources */,
-				8319A2E7132B7F51000531C3 /* CustomPage.rb in Resources */,
-				8319A2E8132B7F51000531C3 /* DayPage.rb in Resources */,
-				837EA736132E30160001DA76 /* OptionsView.rb in Resources */,
-				8366831F1332C563007ED4B9 /* HTTPRequest.rb in Resources */,
-				83668321133337BF007ED4B9 /* Tuml.rb in Resources */,
-				83668325133341ED007ED4B9 /* boot.rb in Resources */,
+				835C5DB6133C289A00A6CF12 /* Icon.icns in Resources */,
+				83A5285B133C3B6900DA8D9A /* HTTPRequest.rb in Resources */,
+				83A5285C133C3B6900DA8D9A /* AppController.rb in Resources */,
+				83A5285D133C3B6900DA8D9A /* AppDelegate.rb in Resources */,
+				83A5285E133C3B6900DA8D9A /* CoreExt.rb in Resources */,
+				83A5285F133C3B6900DA8D9A /* UserTemplate.rb in Resources */,
+				83A52860133C3B6900DA8D9A /* WebView.rb in Resources */,
+				83A52861133C3B6900DA8D9A /* ArrowView.rb in Resources */,
+				83A52862133C3B6900DA8D9A /* DropView.rb in Resources */,
+				83A52863133C3B6900DA8D9A /* MainWindow.rb in Resources */,
+				83A52864133C3B6D00DA8D9A /* boot.rb in Resources */,
+				83A52866133C3B7600DA8D9A /* Info.plist in Resources */,
+				83A52867133C3B7600DA8D9A /* main.rb in Resources */,
+				83A52868133C3B7900DA8D9A /* OptionsView.rb in Resources */,
+				83A5286A133C3B7E00DA8D9A /* Tuml.rb in Resources */,
+				83A5286B133C3B7E00DA8D9A /* Template.rb in Resources */,
+				83A5286C133C3B7E00DA8D9A /* BlockFilter.rb in Resources */,
+				83A5286D133C3B7E00DA8D9A /* Generator.rb in Resources */,
+				83A5286E133C3B7E00DA8D9A /* Engine.rb in Resources */,
+				83A5286F133C3B7E00DA8D9A /* helpers.rb in Resources */,
+				83A52870133C3B7E00DA8D9A /* Parser.rb in Resources */,
+				83A52871133C3B7E00DA8D9A /* ScopeFilter.rb in Resources */,
+				83A52872133C3B8700DA8D9A /* SubmitPage.rb in Resources */,
+				83A52873133C3B8700DA8D9A /* TagPage.rb in Resources */,
+				83A52874133C3B8700DA8D9A /* TemplateContext.rb in Resources */,
+				83A52875133C3B8700DA8D9A /* TextPost.rb in Resources */,
+				83A52876133C3B8700DA8D9A /* AnswerPost.rb in Resources */,
+				83A52877133C3B8700DA8D9A /* AskPage.rb in Resources */,
+				83A52878133C3B8700DA8D9A /* AudioPost.rb in Resources */,
+				83A52879133C3B8700DA8D9A /* ChatPost.rb in Resources */,
+				83A5287A133C3B8700DA8D9A /* CustomPage.rb in Resources */,
+				83A5287B133C3B8700DA8D9A /* DayPage.rb in Resources */,
+				83A5287C133C3B8700DA8D9A /* VideoPost.rb in Resources */,
+				83A5287D133C3B8700DA8D9A /* IndexPage.rb in Resources */,
+				83A5287E133C3B8700DA8D9A /* LinkPost.rb in Resources */,
+				83A5287F133C3B8700DA8D9A /* Page.rb in Resources */,
+				83A52880133C3B8700DA8D9A /* PermalinkPage.rb in Resources */,
+				83A52881133C3B8700DA8D9A /* PhotoPost.rb in Resources */,
+				83A52882133C3B8700DA8D9A /* Post.rb in Resources */,
+				83A52883133C3B8700DA8D9A /* QuotePost.rb in Resources */,
+				83A52884133C3B8700DA8D9A /* SearchPage.rb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		8380564F1336D6250091CAD6 /* Embed MacRuby */ = {
+		8349687D13533FE40099B050 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed MacRuby";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/bash;
-			shellScript = "source ~/.bash_profile\nrvm use macruby@rollr\nif [ $CONFIGURATION = \"Release\" ]; then\n    /usr/local/bin/macruby_deploy --embed --gem temple --gem treetop --gem sanitize --gem sinatra --gem control_tower $TARGET_BUILD_DIR/$FULL_PRODUCT_NAME\n\n#/bin/ln -s 0.9 $TARGET_BUILD_DIR/$FRAMEWORKS_FOLDER_PATH/MacRuby.framework/Versions/Current\n\n    /bin/mv $TARGET_BUILD_DIR/$FRAMEWORKS_FOLDER_PATH/MacRuby.framework/Versions/0.9 $TARGET_BUILD_DIR/$FRAMEWORKS_FOLDER_PATH/MacRuby.framework/Versions/Current\n    \n    /bin/ls -lah $TARGET_BUILD_DIR/$FRAMEWORKS_FOLDER_PATH/MacRuby.framework/Versions\n\nfi\n";
+			shellPath = /bin/sh;
+			shellScript = "";
 		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		830605D61329A4630076F243 /* Sources */ = {
+		835C5D95133C285600A6CF12 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				830605EC1329A4630076F243 /* main.m in Sources */,
+				83A52865133C3B7600DA8D9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		837A7A2013528DB50042939B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 835C5D98133C285600A6CF12 /* Rollr */;
+			targetProxy = 837A7A1F13528DB50042939B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		830605D41329A4200076F243 /* Debug */ = {
@@ -358,22 +395,21 @@
 			};
 			name = Release;
 		};
-		830605F71329A4640076F243 /* Debug */ = {
+		835C5DB1133C285600A6CF12 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_ENABLE_OBJC_GC = supported;
+				GCC_ENABLE_OBJC_GC = required;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "";
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -387,19 +423,18 @@
 			};
 			name = Debug;
 		};
-		830605F81329A4640076F243 /* Release */ = {
+		835C5DB2133C285600A6CF12 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_ENABLE_OBJC_GC = supported;
+				GCC_ENABLE_OBJC_GC = required;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "";
-				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -409,6 +444,38 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		835C5DB4133C285600A6CF12 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		835C5DB5133C285600A6CF12 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
@@ -424,11 +491,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		830605F61329A4640076F243 /* Build configuration list for PBXNativeTarget "Rollr" */ = {
+		835C5DB0133C285600A6CF12 /* Build configuration list for PBXNativeTarget "Rollr" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				830605F71329A4640076F243 /* Debug */,
-				830605F81329A4640076F243 /* Release */,
+				835C5DB1133C285600A6CF12 /* Debug */,
+				835C5DB2133C285600A6CF12 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		835C5DB3133C285600A6CF12 /* Build configuration list for PBXLegacyTarget "Deployment" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				835C5DB4133C285600A6CF12 /* Debug */,
+				835C5DB5133C285600A6CF12 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
